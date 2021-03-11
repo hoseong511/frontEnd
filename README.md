@@ -7,4 +7,7 @@
     - 원하는 단축키 설정 (ex. option + command + /)
 
     ![ScreenRecorderProject4_2](https://user-images.githubusercontent.com/62678380/110417331-bbfad000-80d8-11eb-99a0-432995bb4ee9.gif)
+
+    - Auto Rename Tag 앞태그와 뒷태그가 같이 수정됨
+    - Live Server는 개발을 위해 임시로 로컬서버를 오픈하는 기능
 ## 3. 
