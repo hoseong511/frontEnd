@@ -28,3 +28,54 @@
     절대경로 ```/image/logo.png```   
     상대경로 ```../image/logo.png```   
   - css 선택자
+  - css 초기화 -> 브라우저별로 적용되는 기본 css를 초기화시켜줌
+    ```reset css cdn``` 에서 
+    ``` HTML
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    ```    
+    reset.min.css가 압축된 버전   
+    **항상 초기화 시키려는 코드가 제일 위에 나와야함.**
+  - EMMET 에밋: 코드 자동완성
+
+## HTML 개요
+### 01. 기본 문법
+- 요소(element) : ```<태그>내용</태그>```, 시작태그 닫힌 태그
+### 02. 부모와 자식 관계의 이해
+```HTML
+부모 |--<div>
+요소 | <div></div> <-- 자식요소
+    |--</div>
+```
+ 코드를 항상 보기 좋은 상태로 관리하자.
+
+### 03. 빈태그
+```   <태그>     vs     <태그/>```   
+HTML 1/2/3/4/5    XHTML/HTML5   
+```<태그 속성="값"> 내용</태그>``` 기능의 확장!   
+**빈태그들은 속성과 값을 활용하여 이용함**   
+### 04. 글자와 상자
+요소가 화면에 출력괴는 특성
+- 인라인(inline)요소 : 글자를 만들기 위한 요소들.
+- 블록(Block)요소: 상자(레이아웃)를 만들기 위한 요소들.
+
+```HTML
+<!-- 인라인요소: 글자처럼 취급됨. 줄 바꿈하면 띄어쓰기가 된다. 글자 요소라서 가로, 세로 크기를 조정할 수 없다-->
+<span>Hello</span>
+<span>world</span>
+
+<span style="width:100px;">Hello</span>
+<span style="height:100px;">world</span> 
+적용x
+
+<span style="margin:100px;">Hello</span> 외부 여백
+<span style="padding:100px;">world</span> 내부 여백
+위아래는 적용 x   
+   
+인라인 요소 안에 블록요소를 넣을 수 없다.   
+```
+```HTML
+<div>Hello</div> 가로크기는 부모 요소의 크기만큼 자동으로 늘어남!
+<div>World</div> 세로크기는 포함한 콘텐츠 크기만큼 자동으로 줄어듦
+
+인라인 요소와 다르게 블럭요소는 영역크기조절이 가능하다.
+```
