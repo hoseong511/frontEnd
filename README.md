@@ -79,3 +79,53 @@ HTML 1/2/3/4/5    XHTML/HTML5
 
 인라인 요소와 다르게 블럭요소는 영역크기조절이 가능하다.
 ```
+
+## HTML 핵심정리
+### 01. 핵심요소
+블록 요소
+- div: 특별한 의미가 없는 구분을 위한 요소(Division)
+- h1: 제목을 의마하는 요소(Heading)
+- p: 문장을 의미하는 요소(Paragraph)
+- ul: 순서가 필요없는 목록의 집합을 의미(Unordered List)
+- li: 목록 내 각 항목 (List item)
+   
+인라인(글자) 요소
+- img: 이미지 삽입 요소
+- a: 다른/같은 페이지로 이동하는 하이퍼링크를 지정하는 요소(Anchor) ```<a href="" target="_blank"></a>```새 탭에 창열기
+- span: 특별한 의미가 없는 구분을 위한 요소
+- br: 줄바꿈 요소(Break)
+   
+인라인(글자)요소이면서 블록(상자)요소
+- input: 사용자가 데이터를 입력하는 요소
+  **text**   
+  value, placeholder(사용자가 입력할 값에 대한 힌트), disabled(입력 요소 비활성화, js 이용해서)   
+  **checkbox**   
+  label과 같이 이용함
+  ```HTML
+  <label>
+    <input type="checkbox" /> Apple
+  </label>
+  <label>
+    <input type="checkbox" checked /> Banana
+  </label> 미리 체크함
+  ```
+  **radio**   
+  사용자에게 체크 여부를 그룹에서 1개만 입력 받음
+  ```HTML
+  <label>
+    <input type="radio" name="ho"/> Apple
+  </label>
+  <label>
+    <input type="radio" name="ho" /> Banana
+  </label> 미리 체크함
+  ```
+
+테이블 요소(하나의 블럭요소)
+- table
+- tr: 행을 지정하는 요소(Table Row)
+- td: 열을 지정하는 요소(Table Data)
+
+### 02. 핵심요소 출력 연습
+
+  
+  
