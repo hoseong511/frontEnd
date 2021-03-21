@@ -28,10 +28,10 @@
     절대경로 ```/image/logo.png```   
     상대경로 ```../image/logo.png```   
   - css 선택자
-  - css 초기화 -> 브라우저별로 적용되는 기본 css를 초기화시켜줌
+  - css 초기화 -> 브라우저별로 적용되는 기본 css를 초기화시켜줌 (+ ex. body{all: unset;})
     ```reset css cdn``` 에서 
     ``` HTML
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">    
     ```    
     reset.min.css가 압축된 버전   
     **항상 초기화 시키려는 코드가 제일 위에 나와야함.**
@@ -126,6 +126,7 @@ HTML 1/2/3/4/5    XHTML/HTML5
 - td: 열을 지정하는 요소(Table Data)
 
 ### 02. 핵심요소 출력 연습
+- css 상속!
 
   
   
