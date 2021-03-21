@@ -43,6 +43,10 @@ body {
   background: url("../image/logo.png");  
 } */
 
+span {
+  color: red;
+}
+
 
 @keyframes fadeIn {
   from {
