@@ -43,7 +43,10 @@ body {
   background: url("../image/logo.png");  
 } */
 
-span {
+.span1{
+  color: red;
+}
+.span2{
   color: red;
 }
 
@@ -67,4 +70,8 @@ tr{
 td{
   border: 1px solid red;
   padding: 10px;
+}
+
+#idid{
+  color:salmon;
 }
