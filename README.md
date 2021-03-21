@@ -129,6 +129,8 @@ HTML 1/2/3/4/5    XHTML/HTML5
 - css 상속!
 - 래핑! ```<span></span>```으로 처리하기
 - div는 블럭요소이고 수직으로 쌓이려는 속성
+- input에서 disabled속성!
+- 
 
   
   
