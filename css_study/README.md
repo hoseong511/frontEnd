@@ -81,5 +81,7 @@ div {
 동작을 제어하는 클래스.
 - hover(xx:hover): 선택자 xx요소에 마우스 커서가 올라가 있는 동안 선택.
 - active(xx:active): 선택자 xx요소에 마우스를 클릭하고 있는 동안 선택.
+- focus(xx:focus): 선택자 xx요소가 포커스되면 선택. 포커스가 가능한 요소에만 주로 동작(input, select, ) 단, 이외의 태그에서는 ```tabindex="-1"``을 추가하면 동작됨.
+- first-child(xx;first-child): 선택자 xxrk 형제 요소 중 첫째라면 선택.
 #### 3.4 가장 요소
 #### 3.5 속성

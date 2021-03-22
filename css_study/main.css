@@ -5,7 +5,16 @@
   transition: 1s;
 }
 
-.box:hover{
+.box:focus {
   background-color: brown;
   width: 300px;
+}
+
+input {
+
+}
+
+input:focus {
+  background-color: orange;
+  
 }
