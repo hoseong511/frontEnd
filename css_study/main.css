@@ -3,6 +3,7 @@
   height: 100px;
   background-color: aqua;
   transition: 1s;
+  text-align: center;  
 }
 
 .box:focus {
@@ -14,11 +15,6 @@ input {
 
 }
 
-input:focus {
-  background-color: orange;
-  
-}
-
 .box::after {
   content: "hi";
   display: block; 
@@ -26,3 +22,12 @@ input:focus {
   height: 30px;
   background-color: royalblue;
 }
+
+[type="password"] {
+  background-color: salmon;
+
+}
+[data-fruit-name]{
+  color: red;
+}
+

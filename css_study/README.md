@@ -106,5 +106,7 @@ div {
 #### 3.4 가상 요소
 - before(xx::before): 선택자 xx요소의 내부 앞에 내용을 삽입.(가상의 인라인 요소.. )
 - after(xx::after): 선택자 xx요소의 내부 뒤에 내용을 삽입. 
-- ```display: block;```을 추가하면 해당 요소가 인라인 요소에서 블럭 요소로 변경이 된다.
+- ```display: block;```을 추가하면 해당 요소가 인라인 요소에서 블럭 요소로 변경이 된다.(width, height요소가 적용될 수  있다.)
 #### 3.5 속성
+- attr([xx]): 속성 xx을 포함한 요소 선택(ex. disabled를 활용가능.)
+- attr=val([type="password"]): 속성 type의 값이 password인 요소 선택.
