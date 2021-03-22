@@ -18,3 +18,11 @@ input:focus {
   background-color: orange;
   
 }
+
+.box::after {
+  content: "hi";
+  display: block; 
+  width: 30px;
+  height: 30px;
+  background-color: royalblue;
+}
