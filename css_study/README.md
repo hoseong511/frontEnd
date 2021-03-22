@@ -82,6 +82,26 @@ div {
 - hover(xx:hover): 선택자 xx요소에 마우스 커서가 올라가 있는 동안 선택.
 - active(xx:active): 선택자 xx요소에 마우스를 클릭하고 있는 동안 선택.
 - focus(xx:focus): 선택자 xx요소가 포커스되면 선택. 포커스가 가능한 요소에만 주로 동작(input, select, ) 단, 이외의 태그에서는 ```tabindex="-1"``을 추가하면 동작됨.
-- first-child(xx;first-child): 선택자 xxrk 형제 요소 중 첫째라면 선택.
-#### 3.4 가장 요소
+- first-child(xx:first-child): 선택자 xx가 형제 요소 중 첫째라면 선택.
+- last-child(xx:last-child): 선택자 xx가 형제 요소 중 막내라면 선택.
+```html
+<div class="fruits">
+  <span>딸기</span>
+  <span>딸기</span>
+  <div>오렌지</div>
+  <p>망고</p>
+  <h3>사과</h3>  
+</div>
+  ```
+- nth-child(xx:nth-child(n)): 선택자 xx가 형제 요소 중 (n)째라면 선택.
+```css
+.fruits *:nth-child(2n) {
+  color: red;
+}
+/* 제로베이스드 넘버링으로 n은 0부터 시작함. 짝수 번째에 css적용 구조 */
+/* 2n, 2n+1, n+3, -n+3, ... */
+```
+- not(xx:not(yy)): 선택자 yy가 아닌 xx요소 선택.
+
+#### 3.4 가상 요소
 #### 3.5 속성
