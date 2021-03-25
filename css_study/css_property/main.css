@@ -27,3 +27,12 @@ a {
   line-height: 100px;
 
 }
+.test1 {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  background-image: url('https://heropy.blog/css/images/logo.png');
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
