@@ -2,9 +2,10 @@
   width: 250px;
   
   background-color: cornflowerblue;
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   justify-content: center;
+  perspective: 250px;
   
 }
 
@@ -14,8 +15,16 @@
   border: 3px dashed red;
   background-color: orange;
   text-align: center;
-  
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;  
   color: aliceblue;
+  
+  
+}
+.container .item:active {
+  transition: 1s;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
   
 }
