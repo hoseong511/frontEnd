@@ -35,3 +35,4 @@ images, favicon.ico, favicon.png 챙기기
 - 폰트사이즈는 기본적으로 16px, 줄 간격은 1.4가 좋음
 - img는 인라인요소, baseline이 추가되어있다.
   <img src="https://user-images.githubusercontent.com/62678380/112920085-39978600-9143-11eb-8dff-9841e7f3afcf.png" style="margin: 0 auto; display: block; width: 200px; height: 200px;" >
+- 부모요소 기준으로 시작과 끝 위치를 명확히 지정을 해주고 margin: auto를 사용하면 가운데 정렬이 된다.
