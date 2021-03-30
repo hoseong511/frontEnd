@@ -15,3 +15,16 @@ images, favicon.ico, favicon.png 챙기기
 - google font 검색 후 https://fonts.google.com/ 접속!
 - nanum 검색 후 나눔고딕체를 이용하자
 - 폰트에 라이선스가 있으므로 항상 확인하자!
+
+### 0.3 아이콘 사용
+- google material icon 검색 후 https://material.io/resources/icons/?style=baseline 접속
+- 해당 url의 메인페이지로 이동 후 get started로 이동
+- web > web getting started로 이동
+- ```<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">``` 를 이용. cdn 말고 구글 아이콘!
+- 다시 https://material.io/resources/icons/?style=baseline 로 가서 원하는 아이콘 검색하기
+  ```html
+  <span class="material-icons">
+    login
+  </span>
+  ``` 
+  이런 형식으로 제공되는 것을 확인
