@@ -28,3 +28,10 @@ images, favicon.ico, favicon.png 챙기기
   </span>
   ``` 
   이런 형식으로 제공되는 것을 확인
+
+### 1. Header
+- header 태그 이용. 다른 기능이 있지는 않다.
+- 절대 경로와 상대 경로
+- 폰트사이즈는 기본적으로 16px, 줄 간격은 1.4가 좋음
+- img는 인라인요소, baseline이 추가되어있다.
+  <img src="https://user-images.githubusercontent.com/62678380/112920085-39978600-9143-11eb-8dff-9841e7f3afcf.png" style="margin: 0 auto; display: block; width: 200px; height: 200px;" >
