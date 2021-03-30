@@ -34,9 +34,8 @@ images, favicon.ico, favicon.png 챙기기
 - 절대 경로와 상대 경로
 - 폰트사이즈는 기본적으로 16px, 줄 간격은 1.4가 좋음
 - img는 인라인요소, baseline이 추가되어있다.
-
     <img src="https://user-images.githubusercontent.com/62678380/112954227-2bfcf300-9179-11eb-8772-b4855d780e58.png" style="margin: 0 auto; display: block; width: 200px; height: 200px;" />   
-    <br>
+    
 - 부모요소 기준으로 시작과 끝 위치를 명확히 지정을 해주고 margin: auto를 사용하면 가운데 정렬이 된다.
 
 ### 1.1 드롭다운 메뉴
