@@ -36,3 +36,10 @@ images, favicon.ico, favicon.png 챙기기
 - img는 인라인요소, baseline이 추가되어있다.
   <img src="https://user-images.githubusercontent.com/62678380/112920085-39978600-9143-11eb-8dff-9841e7f3afcf.png" style="margin: 0 auto; display: block; width: 200px; height: 200px;" >
 - 부모요소 기준으로 시작과 끝 위치를 명확히 지정을 해주고 margin: auto를 사용하면 가운데 정렬이 된다.
+
+### 1.1 드롭다운 메뉴
+- a 태그 사용시 팁: #을 이용하거나 javascript:void(0)을 이용하자
+- 항상 상위 선택자를 넣어주자
+- 미리 html 구조의 태그들을 css로 옮겨놓자
+- position: absolute; 를 하면 display: block; 이 자동적으로 된다.
+- font가 없으면 두번째 font를 선택함 
