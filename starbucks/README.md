@@ -10,6 +10,8 @@ images, favicon.ico, favicon.png 챙기기
 <meta property="og:url" content="website" />
 <meta property="og:title" content="website" />
 <meta property="og:image" content="website" />
-
-
 ```
+### 0.2 폰트적용
+- google font 검색 후 https://fonts.google.com/ 접속!
+- nanum 검색 후 나눔고딕체를 이용하자
+- 폰트에 라이선스가 있으므로 항상 확인하자!
