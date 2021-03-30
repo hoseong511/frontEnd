@@ -39,7 +39,11 @@ images, favicon.ico, favicon.png 챙기기
 
 ### 1.1 드롭다운 메뉴
 - a 태그 사용시 팁: #을 이용하거나 javascript:void(0)을 이용하자
-- 항상 상위 선택자를 넣어주자
+- 항상 상위 선택자를 넣어주어야 원하는 태그의 값을 명확히 불러올 수 있다.
 - 미리 html 구조의 태그들을 css로 옮겨놓자
 - position: absolute; 를 하면 display: block; 이 자동적으로 된다.
 - font가 없으면 두번째 font를 선택함 
+- 
+
+### 1.2 메뉴의 검색 part
+- 일치 선택자 ``` .search.focused {}``` 이런식으로 붙여서 사용하게 된다.
