@@ -279,6 +279,10 @@ header .badges .badge {
   margin-top: 120px;
   background-image: url("../images/visual_bg.jpg");
   background-position: center;
+  /* background-attachment: fixed;
+  background-size: 110%;
+  background-repeat: no-repeat; */
+  /* width: 100%;   */
 }
 
 .visual .inner {
@@ -302,6 +306,14 @@ header .badges .badge {
   bottom: 0;
   right: -47px;
 }
+
+/* @media(max-width: 1000px){
+  .visual .cup1.image {
+    top: 10%;
+    left: 4.5%;
+    width: 61.8%;
+  }
+} */
 
 .visual .cup1.text {
   position: absolute;
@@ -379,9 +391,18 @@ header .badges .badge {
 }
 
 .notice .notice-line .inner__left .swiper-container {
-  height: 62px;
-  background-color: orange;
+  height: 62px;  
   flex-grow: 1;
+}
+
+.notice .notice-line .inner__left .swiper-slide {
+  height: 62px;
+  display : flex;
+  align-items: center;
+}
+
+.notice .notice-line .inner__left .swiper-slide a {
+  color: #fff;
 }
 
 .notice .notice-line .inner__left .notice-line__more {
@@ -420,7 +441,7 @@ header .badges .badge {
 
 .notice .notice-line .inner__right .toggle-promotion .material-icons {
 
-
+}
 
 
 
