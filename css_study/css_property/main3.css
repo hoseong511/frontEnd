@@ -2,9 +2,10 @@
   width: 250px;
   
   background-color: cornflowerblue;
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   justify-content: center;
+  perspective: 250px;
   
 }
 
@@ -13,8 +14,23 @@
   height: 100px;
   border: 3px dashed red;
   background-color: orange;
+<<<<<<< HEAD
   text-align: center; 
   line-height: 100px;
   color: aliceblue;
+=======
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  color: aliceblue;
+  
+  
+}
+.container .item:active {
+  transition: 1s;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+>>>>>>> 753134db75a85f8c9d57de52d35dd6c41d18e55b
   
 }
