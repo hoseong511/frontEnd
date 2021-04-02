@@ -70,3 +70,17 @@ new Swiper('.promotion .swiper-container', {
     nextEl : '.promotion .swiper-next'
   }
 });
+
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion')
+let isHidePromtotion = false;
+promotionToggleBtn.addEventListener('click', function () {
+  isHidePromtotion = !isHidePromtotion
+  if (isHidePromtotion) {
+    // 숨김처리!
+    promotionEl.classList.add('hide');
+  } else {
+    // 보임처리!
+    promotionEl.classList.remove('hide');
+  }
+});
