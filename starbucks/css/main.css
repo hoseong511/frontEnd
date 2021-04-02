@@ -4,8 +4,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4; 
-  font-family: 'Nanum Gothic', sans-serif;
-  height: 3000px;
+  font-family: 'Nanum Gothic', sans-serif;  
   overflow-x: hidden;
 }
 
@@ -587,7 +586,7 @@ header .badges .badge {
 }
 .youtube .youtube__area {
   width: 1920px;
-  background-color: orange;
+  /* background-color: orange; */
   position: absolute;
   left: 50%;
   margin-left: calc(1920px / -2);
@@ -617,6 +616,25 @@ header .badges .badge {
   position: absolute;
   top: 0;
   left: 0;
+}
+.youtube .inner {
+  height: 700px;
+  background-color: royalblue;
+}
+.youtube .floating1 {
+  position: absolute;
+  top:50px;
+  left: 0;
+}
+.youtube .floating2 {
+  position: absolute;
+  top:350px;
+  left: 150px;
+}
+.youtube .floating3 {
+  position: absolute;
+  bottom: -200px;
+  right: 0;
 }
 
 

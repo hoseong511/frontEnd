@@ -16,10 +16,13 @@ function onYouTubeIframeAPIReady() {
       loop: true, // 반복 재생 유무
       playlist: 'An6LvWQuj_8' //반복 재생할 유튜브 영상 id 목록
     },
-    // events: {
-    //   onReady: function (event) {
-    //     // event.target.mute() //음소거
-    //   }
-    // }
+    events: {
+      onReady: function (event) {
+        // event.target.setVolume(50);
+        event.target.mute() //음소거        
+        // event.target.seekTo(45)
+        // event.target.playVideo();
+      }
+    }
   });
 }
