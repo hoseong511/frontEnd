@@ -91,16 +91,16 @@ a {
   transform: translateX(0);
 }
 .show .back-to-position.delay-0 {
-  transition: 0s;
+  transition-delay: 0s;
 }
 .show .back-to-position.delay-1 {
-  transition: .3s;
+  transition-delay: .3s;
 }
 .show .back-to-position.delay-2 {
-  transition: .6s;
+  transition-delay: .6s;
 }
 .show .back-to-position.delay-3 {
-  transition: .9s;
+  transition-delay: .9s;
 }
 
 
