@@ -1,29 +1,17 @@
-import random from "./getRandom"
+'use strict'
 
-// 조건문
+// 반복문 
+// for (시작조건; 종료조건; 변화조건) {}
 
-const a = random()
+const ulEl = document.querySelector('ul')
 
-if ( a === 0 ) {
-  console.log('a is 0');
-} else if ( a === 2) {
-  console.log('a is 2');
-} else if ( a === 4 ) {
-  console.log('a is 4');
-} else {
-  console.log('rest...');
-}
-
-switch (a) {
-  case 0:
-    console.log('a is 0');
-    break
-  case 2:
-    console.log('a is 2');
-    break
-  case 4:
-    console.log('a is 4');
-    break
-  default:
-    console.log('rest...s');
+for (let i =0; i < 10; i++){
+  const li = document.createElement('li')
+  li.textContent = `list-${ i+1 }`
+  if ( (i + 1) % 2 === 0){
+    li.addEventListener('click', () => {
+      console.log(li.textContent);
+    })
+  }
+  ulEl.appendChild(li)
 }
