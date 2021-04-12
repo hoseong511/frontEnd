@@ -1,13 +1,29 @@
-'use strict'
+import random from "./getRandom"
 
-// 삼항 연산자(ternary operator)
+// 조건문
 
-const a = 1 < 2
+const a = random()
 
-if (a) {
-  console.log('참');
+if ( a === 0 ) {
+  console.log('a is 0');
+} else if ( a === 2) {
+  console.log('a is 2');
+} else if ( a === 4 ) {
+  console.log('a is 4');
 } else {
-  console.log('거짓');
+  console.log('rest...');
 }
 
-console.log(a ? '참' : '거짓');
+switch (a) {
+  case 0:
+    console.log('a is 0');
+    break
+  case 2:
+    console.log('a is 2');
+    break
+  case 4:
+    console.log('a is 4');
+    break
+  default:
+    console.log('rest...s');
+}
