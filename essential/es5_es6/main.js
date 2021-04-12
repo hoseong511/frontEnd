@@ -1,13 +1,17 @@
-// 변수 유효범위(variable scope)
-// var, let, const 최신 트렌드는 블록 레벨의 유효 범위인 let과 const만 이용함.
+// 형 변환(Type conversion)
 
-const scope = () =>{
-  if (true) {
-    const a = 123 
-    var b = 1231231
-    console.log(a);
-  } // const와 let은 블록 레벨의 유효 범위를 갖는다.
-  console.log(b); // var은 함수 레벨의 유효 범위
+const a = 2
+const b = '2'
+
+console.log(a == b); // '==' 는 동등연산자
+                    // 자동으로 형변환 시킨다.
+
+// 참 같은 값 (Truthy)
+// true, {}, [], 1, 2, 'false', -12, '3.14' ...
+// 거짓 같은 값 (Falsy)
+// false, '', null, undefined, 0, -0, Nan
+
+// javaScript에서 사용되는 기능
+if (0) {
+  console.log('hoho')
 }
-
-scope()
