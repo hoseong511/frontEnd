@@ -1,20 +1,15 @@
-// 화살표 함수
-// () => {}
+// 즉시실행함수
+// IIFE, Immediately-invoked Function
 
-const double = function (x) {
-  return x * 2
+const a = 8
+function double(){
+  console.log(a * 2);
 }
 
-console.log(double(7));
+(function () {
+  console.log(a*2);
+}());
 
-const doubleArrow = (x, y) => {
-  if (x > 2) {
-    return 'x > 2'
-  } 
-  return x * y
-}
-
-// 객체데이터를 표현 할 떄에는 ({})
-const doubleArrow2 = x => ({ name: 'ho'})
-
-console.log(doubleArrow2(3));
+(function () {
+  console.log(a*2);
+})();
