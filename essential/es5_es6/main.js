@@ -1,17 +1,13 @@
-'use strict'
+// 변수 유효범위(variable scope)
+// var, let, const 최신 트렌드는 블록 레벨의 유효 범위인 let과 const만 이용함.
 
-// 반복문 
-// for (시작조건; 종료조건; 변화조건) {}
-
-const ulEl = document.querySelector('ul')
-
-for (let i =0; i < 10; i++){
-  const li = document.createElement('li')
-  li.textContent = `list-${ i+1 }`
-  if ( (i + 1) % 2 === 0){
-    li.addEventListener('click', () => {
-      console.log(li.textContent);
-    })
-  }
-  ulEl.appendChild(li)
+const scope = () =>{
+  if (true) {
+    const a = 123 
+    var b = 1231231
+    console.log(a);
+  } // const와 let은 블록 레벨의 유효 범위를 갖는다.
+  console.log(b); // var은 함수 레벨의 유효 범위
 }
+
+scope()
