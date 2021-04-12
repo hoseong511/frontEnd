@@ -1,18 +1,18 @@
-// 호이스팅(hoisting)
-// 함수 선언부가 유효범위 최상단으로 끌어올려지는 현상
+// 콜백(CallBack)
+// 함수의 인수로 사용되는 함수
 
-const a = 7
+// ex. setTimeout(함수, 시간)
 
-double2();  //호이스팅에 의하여 실행됨.
+function timeout(call) {
+  setTimeout( () => {
+    console.log("Ho!!");
+    call() // 실행 위치를 보장하고자 하는 용도로 이용함
+  }, 3000)
+}
 
-const double = function () {
-  console.log(a*2);
-} // 이게 함수 표현임
+timeout(() => {
+  console.log('Done!!!1');
+})
 
-double()
-
-function double2() {
-  console.log(a*3);
-} // 이게 함수 선언
-
-// 화살표 함수는 익명함수임!!
+// 모든 처리 이후에 원하는 함수가 실행되도록 보장
+// 처리가 완료된 후에 원하는 함수를 실행시키고 싶을 때 이용
