@@ -1,0 +1,87 @@
+/* 공통 component  */
+html {
+  font-family: Roboto, Helvetica Neue;
+  font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+  padding: 6px;
+  top: 0;
+}
+header > .inner {  
+  height: 50px;  
+}
+header .submenu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+}
+header .submenu ul.menu {
+  padding: 0 10px 0 32px;
+  display: flex;
+}
+header .submenu ul.menu li{
+  position: relative;
+}
+header .submenu ul.menu li a {     
+  padding: 8px;
+  display: block;
+  color: rgba(0,0,0,0.87);
+  font-size: 13px;
+}
+header .submenu ul.menu li a:hover {     
+  text-decoration: underline;
+}
+header .submenu ul.menu li a div {       
+  font-size: 18px;
+}
+header .submenu ul.menu li a div:hover {
+
+}
+.main {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 560px);
+}
+.main img {
+  width: 272px;
+  height: 92px;
+}
+.main .search {
+  border: 1px solid #ccc;
+  border-radius: 20px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 584px;
+  margin: 0 auto;
+  height: 44px;
+
+}
+.main .search input {
+  outline: none;
+  border: transparent;
+  background-color: transparent;
+  padding: 0 20px;
+}
+.main .search div {
+  cursor: pointer;
+}
+
