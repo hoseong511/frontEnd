@@ -1,18 +1,34 @@
-// 콜백(CallBack)
-// 함수의 인수로 사용되는 함수
+'use strict'
 
-// ex. setTimeout(함수, 시간)
+// 객체 내 에서 속성(property) 과 메소드. 이 둘을 묶어 멤버라고도 함.
 
-function timeout(call) {
-  setTimeout( () => {
-    console.log("Ho!!");
-    call() // 실행 위치를 보장하고자 하는 용도로 이용함
-  }, 3000)
+// const ho = {
+  //   firstName: 'Ho',
+  //   lastName: 'Song',
+  //   getFullName : function () {
+    //     return `${this.firstName} ${this.lastName}`
+    //   }
+    // }
+    // console.log(ho);
+    // console.log("hihihihi");
+    
+// 리터럴 방식?
+const hoho = {} // "A", []
+
+// 생성자 함수 ; 파스칼 케이스를 사용함 
+function User(first, last){
+  this.firstName = first
+  this.lastName = last      
+}
+// JS: 프로토타입!!! 기반의 언어 
+User.prototype.getFullName = function (){
+  return `${this.firstName} ${this.lastName}`
 }
 
-timeout(() => {
-  console.log('Done!!!1');
-})
+// 인스턴스 생성!
+const ho1 = new User('Ho', 'Song')
+const amy = new User('Amy', 'Clarke')
+const neo = new User('neo', 'smith')
 
-// 모든 처리 이후에 원하는 함수가 실행되도록 보장
-// 처리가 완료된 후에 원하는 함수를 실행시키고 싶을 때 이용
+console.log(ho1.getFullName());
+console.log(amy.getFullName());
