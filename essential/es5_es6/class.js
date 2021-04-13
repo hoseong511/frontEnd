@@ -1,21 +1,26 @@
-const ho = {
-  name: 'Ho',
-  normal() {
-    console.log(this.name);
-  },
-  arrow: () => {
-    console.log(this.name);
+// 상속
+class Vehicle {
+  constructor(name, wheel) {
+    this.name = name
+    this.wheel = wheel
   }
-}// 기본함수를 축약형으로 사용가능함.
+}
+const myVehicle = new Vehicle('운송수단', 2)
+console.log(myVehicle);
 
-// class 같은 문법
-
-class User {
-  constructor(first, last) {  //하나의 함수라고 보면 됨!    
-    this.firstName = first
-    this.lastName = last
+class Bicycle extends Vehicle {
+  constructor(name, wheel){
+    super(name, wheel)
   }
-  getFullName(){
-    return `${this.firstName} ${this.lastName}`
+}
+const myBicycle = new Bicycle('삼천리', 2)
+const daughtersBicycle = new Bicycle('세발', 3)
+console.log(myBicycle);
+console.log(daughtersBicycle);
+
+class Car extends Vehicle {
+  constructor(name, wheel, license){
+    super(name, wheel);
+    this.license = license
   }
 }
