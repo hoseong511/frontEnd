@@ -1,18 +1,26 @@
-// 호이스팅(hoisting)
-// 함수 선언부가 유효범위 최상단으로 끌어올려지는 현상
+import _ from 'lodash'
 
-const a = 7
+const usersA = [
+  {userId: '1', name: 'HO'},
+  {userId: '2', name: 'Neo'},
+]
+const usersB = [
+  {userId: '1', name: 'HO'},
+  {userId: '3', name: 'Amy'},
+]
 
-double2();  //호이스팅에 의하여 실행됨.
+const usersC = usersA.concat(usersB)
+console.log('concat', usersC);
+console.log('uniqBy', _.uniqBy(usersC, 'userId'));
 
-const double = function () {
-  console.log(a*2);
-} // 이게 함수 표현임
+const usersD = _.unionBy(usersA, usersB, 'userId');
+console.log('unionBy', usersD);
 
-double()
+const foundUser = _.find(usersB, {name: 'Amy'})
+const foundUserIndex = _.findIndex(usersB, {name: 'Amy'})
 
-function double2() {
-  console.log(a*3);
-} // 이게 함수 선언
+console.log(foundUser);
+console.log(foundUserIndex);
 
-// 화살표 함수는 익명함수임!!
+_.remove(users, {name: 'HO'})
+console.log(users);
