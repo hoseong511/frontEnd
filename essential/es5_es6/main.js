@@ -1,26 +1,19 @@
-import _ from 'lodash'
+const user = {
+  name: 'HEROPY',
+  age: 85,
+  emails: [
+    'thdghtjd115@naver.com',
+    'hoho1212@naver.com'
+  ]
+}
 
-const usersA = [
-  {userId: '1', name: 'HO'},
-  {userId: '2', name: 'Neo'},
-]
-const usersB = [
-  {userId: '1', name: 'HO'},
-  {userId: '3', name: 'Amy'},
-]
+// localStorage.setItem('user', JSON.stringify(user))
+// console.log(JSON.parse(localStorage.getItem('user')));
+// localStorage.removeItem('user')
 
-const usersC = usersA.concat(usersB)
-console.log('concat', usersC);
-console.log('uniqBy', _.uniqBy(usersC, 'userId'));
-
-const usersD = _.unionBy(usersA, usersB, 'userId');
-console.log('unionBy', usersD);
-
-const foundUser = _.find(usersB, {name: 'Amy'})
-const foundUserIndex = _.findIndex(usersB, {name: 'Amy'})
-
-console.log(foundUser);
-console.log(foundUserIndex);
-
-_.remove(users, {name: 'HO'})
-console.log(users);
+const str = localStorage.getItem('user')
+const obj = JSON.parse(str)
+console.log(obj);
+obj.age = 22
+console.log(obj);
+localStorage.setItem('user', JSON.stringify(obj))
