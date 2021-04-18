@@ -1,21 +1,17 @@
 {
-  "name": "es5_es6",
+  "name": "regexp",
   "version": "1.0.0",
-  "description": "ES5와 ES6의 차이를 알고있는 것도 도움이 많이 된다.\r - barbel을 이용하면??",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "builde": "parcel build index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
-  },
-  "dependencies": {
-    "axios": "^0.21.1",
-    "lodash": "^4.17.21"
   }
 }
