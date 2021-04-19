@@ -9,5 +9,5 @@ var sym = Symbol();
 var obj = (_a = {},
     _a[sym] = 'value',
     _a);
-obj['sym']; // x
+obj['sym']; // x <- 심볼을 사용하는 이유
 obj[sym]; // o
