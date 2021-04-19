@@ -1,0 +1,17 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "- SCSS/Sass는 css전처리기임\r - SCSS/Sass의 문법을 알고, 변수와 중첩기능을 이용해서 편리하게 css를 적용하자.\r -",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.10"
+  }
+}
