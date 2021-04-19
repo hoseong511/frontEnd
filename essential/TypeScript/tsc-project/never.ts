@@ -26,7 +26,7 @@ if (typeof b !== 'string') {
 
 type Indexable<T> = T extends string ? T & { [index: string]: any} : never;
 
-const b: Indexable<{}> = '';
+const b: Indexable<string> = '';
 // 잘못된 타입을 넣는 실수를 막는 역할을 한다.
 
 // ?아직 잘 모르겠는데 분명한 정보인데 굉장히 뭔가 있어보이게 작성하는것 같음..
