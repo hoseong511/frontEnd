@@ -37,4 +37,41 @@
   wrapper 객체를 사용하듯이 대문자로 표현해서는 안된다.
   프리미티브를 나타내지 않는 형태들이다.
 
+## 작성자와 사용자의 관점으로 코드 바라보기
+- 컴파일러에게 사용하는 타입을 명시적으로 지정하는 시스템
+- 컴파일러가 자동으로 타입을 추론하는 시스템
+- 타입추론: 컴파일시 자동으로 타입을 추론함.
+- noimplicitAny 에 의한 타입방어
+- number 타입으로 추론된 리턴 타입
+  ```ts
+  function f4(a: number) {
+    if (a > 0 ) P
+    return a * 38;
+  }
+  // number 안에 undefined가 들어있음을 알수 있는 대목 ; 모든 타입에 포함된 null과 undefined
+  console.log(f4(-5) + 5);
+  strctNullChecks 옵션으로 타입방어
+  ```
+  - noimplicitReturns 옵션을 키자
+  - object literal type
+  - 나만의 타입을 만드는 방법
+    ```ts
+    interface personInterface {
+      name: string;
+      age: number;
+    }
 
+    type PersonTypeAlias = {
+      name: string;
+      age: number;
+    }
+
+    function f8(a: PersonInterface): string {
+      return `이름은 ${a.name} 이고, 연령대는 ${Math.floor(a.age / 10 ) * 10 }대 입니다.`;
+    }
+
+    function f9(a: PersonTypeAlias): string {
+      return `이름은 ${a.name} 이고, 연령대는 ${Math.floor(a.age / 10 ) * 10 }대 입니다.`;
+    }
+    ```
+    
