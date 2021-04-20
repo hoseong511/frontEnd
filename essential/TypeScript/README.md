@@ -107,3 +107,22 @@ function getPersonById(id: PersonID) {}
 ### duck typing - 설명을 좀더 찾아보기
 (python)
 
+## Compilation Context
+- TypeScript Deep Dive -> 
+- 어떤 파일을 어떤 방식으로 컴파일 할지 tsconfig.json에 적혀있다.
+### 1. compileOnSave
+```json
+{
+  ...,
+  "compileOnSveDefinition" : {
+    "properties": {
+      "compileOnSave": {
+        "description": "Enable Compile-on-Save for this project.",
+        "type": "boolean"// Compilation Context
+// TypeScript Deep Dive -> 
+// 어떤 파일을 어떤 방식으로 컴파일 할지 tsconfig.json에 적혀있다.
+      }
+    }
+  }
+}
+
