@@ -74,4 +74,36 @@
       return `이름은 ${a.name} 이고, 연령대는 ${Math.floor(a.age / 10 ) * 10 }대 입니다.`;
     }
     ```
-    
+## structural type vs nominal type
+### structural type system - 구조가 같으면, 같은 타입이다.
++ 구조가 같으면 같은 타입
+  ```ts
+    interface personInterface {
+        name: string;
+        age: number;
+      }
+
+    type PersonTypeAlias = {
+      name: string;
+      age: number;
+    };
+
+    let personInter: personInterface = {} as any;
+    let persontype: PersonTypeAlias = {} as any;
+
+    personInter = persontype;
+    persontype = personInter
+    ```
+### nominal type system - 구조가 같아도 이름이 다르면, 다른 타입
+(c언어, 자바): ts는 따르지 않음
+```ts
+type PersonId = string & { readonly brand: unique symbol };
+
+function PersonID(id: string): PersonID {
+  return id as PersonID;
+}
+function getPersonById(id: PersonID) {}
+```
+### duck typing - 설명을 좀더 찾아보기
+(python)
+
