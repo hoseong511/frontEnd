@@ -10,3 +10,4 @@ dev: parcel index.html
 build: parcel build index.html
 ```
 - parcel-bundler가 자동으로 필요한 패키지를 설치한다.( "sass"가 설치되어 있음)
+- sassmeister.com -> css 변환된 값을 바로 확인할 수 있는 사이트

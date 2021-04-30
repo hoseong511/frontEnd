@@ -1,8 +1,12 @@
-$color: royalblue; // 변수 선언 할당
-.container {
-  h1 { // 중첩기능 사용
-    color: $color; // 변수사용
-    /*background-color: orange;*/// 코드가 남아있음
-    // font-size:60px; -> build 시 주석처리된 코드가 삭제됨
+.container
+  > ul { // 자식 선택자를 사용할 수 있는 기호
+    li { // 중첩 기능!!!
+      font-size: 40px;
+      .name {
+        color: royalblue;
+      }
+      .age {
+        color: salmon;
+      }
+    }
   }
-}
