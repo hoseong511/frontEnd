@@ -1,20 +1,18 @@
-// 중첩된 속성
-// font: {}; margin: {}; .. 속성들을 편하게 작성할 수 있는 방법을 제공한다.
+// 변수(variables) 재활용이 가능한 용도로 사용하자
+
+$size: 150px; // 전역 변수 및 지역 변수로 사용가능
+
+.container {
+  $size2: 50px;
+  position: fixed;
+  top: 100px;
+  .item {
+    $size2: 100px; // 변수 재 할당 {} 유효범위 주의
+    width: $size;
+    height: 100px;
+    transform: translateX($size2);
+  }
+}
 .box {
-  font: {
-    weight: bold;
-    size: 10x;
-    family: sans-serif;
-  }; // font- '네임스페이스가 동일하다'의 의미
-  margin: {
-    top: 10px;
-    left: 20px;
-    right: 10px;
-  };
-  padding: {
-    top: 10px;
-    bottom: 40px;
-    left: 20px;
-    right: 30px;
-  };
+  width: $size2; // 유효범위를 벗어나서 인식x
 }
