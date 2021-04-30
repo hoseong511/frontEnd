@@ -3,4 +3,10 @@
 ## 1. 개요
 - SCSS/Sass는 css전처리기임
 - SCSS/Sass의 문법을 알고, 변수와 중첩기능을 이용해서 편리하게 css를 적용하자.
-- 
+## 2. 프로젝트 시작
+```sh
+npm i -D parcel-bundler
+dev: parcel index.html
+build: parcel build index.html
+```
+- parcel-bundler가 자동으로 필요한 패키지를 설치한다.( "sass"가 설치되어 있음)

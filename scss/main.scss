@@ -1,6 +1,8 @@
-$color: royalblue;
+$color: royalblue; // 변수 선언 할당
 .container {
-  h1 {
-    color: $color;
+  h1 { // 중첩기능 사용
+    color: $color; // 변수사용
+    /*background-color: orange;*/// 코드가 남아있음
+    // font-size:60px; -> build 시 주석처리된 코드가 삭제됨
   }
 }
