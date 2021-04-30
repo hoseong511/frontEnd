@@ -1,12 +1,21 @@
-.container
-  > ul { // 자식 선택자를 사용할 수 있는 기호
-    li { // 중첩 기능!!!
-      font-size: 40px;
-      .name {
-        color: royalblue;
-      }
-      .age {
-        color: salmon;
-      }
+// & - 상위 선택자 참조
+.btn {
+  position: absolute;
+  &.active { // &가 상위선택자를 참조기능
+              // 상위 선택자가 하위 &로 치환
+    color: red;
+  }
+}
+.list {
+  li {
+    &:last-child {
+      margin-right: 0;
     }
   }
+}
+
+.fs { // 엄청 편리한 상위선택자 참조
+  &-small { font-size: 12px; }
+  &-medium { font-size: 14px; }
+  &-large { font-size: 17px; }
+}
