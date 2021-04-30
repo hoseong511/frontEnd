@@ -1,26 +1,10 @@
-@mixin center { // 여러가지 속성을 담아 넣을 수 있다.
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  width: 200px;
-  height: 200px;
-  background-color: orange;
-  @include center;
-  .item {
-    width: 100px;
-    height: 100px;
-    background-color: royalblue;
-    @include center;
+// 반복문
+// scss의 보간법(template literal)
+@for $i from 1 through 10 {
+  .box:nth-child(#{$i}) {
+    width: 100px * $i; // 값을 명시하는 부분에는 보간처리x
   }
 }
-@mixin box($size1:100px, $size2:100px, $color: tomato) { // 매개변수와 기본값 지정
-  width: $size1; 
-  height: $size2;
-  background-color: $color;
-}
-.box {
-  @include box($color: green); // 키워드 인수에 대해서 인수에 순서와 상관없이 키워드로 직접 대입한다.
-}
+// @for $i from 1 through 32 {
+
+// }
