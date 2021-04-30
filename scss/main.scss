@@ -1,19 +1,26 @@
-// 기본 연산자
-div {
-  width: 20px + 20px;
-  height: 40px - 10px;
-  font-size: 10px * 2;
-  margin: (30px / 2); // / 연산사용시 () 이용 or 변수를 이용해서 사용 or 산술연산을 하나 더 사용
-  padding: 20px % 7;
+@mixin center { // 여러가지 속성을 담아 넣을 수 있다.
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-span {
-  font-size: 10px;
-  line-height: 10px;
-  font: 10px / 10px serif; // 단축속성이 있기 때문에 / 기호를 나눗셈으로 x
+
+.container {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  @include center;
+  .item {
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    @include center;
+  }
 }
-.ho {
-  // width: 100% - 200px; // 단위는 맞춰줘야 한다.
-  width: calc(100% - 200px); // 다른 단위의 연산
-  background-color: royalblue;
-  height: 100px;
+@mixin box($size1:100px, $size2:100px, $color: tomato) { // 매개변수와 기본값 지정
+  width: $size1; 
+  height: $size2;
+  background-color: $color;
+}
+.box {
+  @include box($color: green); // 키워드 인수에 대해서 인수에 순서와 상관없이 키워드로 직접 대입한다.
 }
