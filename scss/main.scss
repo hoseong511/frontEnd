@@ -1,18 +1,19 @@
-// 변수(variables) 재활용이 가능한 용도로 사용하자
-
-$size: 150px; // 전역 변수 및 지역 변수로 사용가능
-
-.container {
-  $size2: 50px;
-  position: fixed;
-  top: 100px;
-  .item {
-    $size2: 100px; // 변수 재 할당 {} 유효범위 주의
-    width: $size;
-    height: 100px;
-    transform: translateX($size2);
-  }
+// 기본 연산자
+div {
+  width: 20px + 20px;
+  height: 40px - 10px;
+  font-size: 10px * 2;
+  margin: (30px / 2); // / 연산사용시 () 이용 or 변수를 이용해서 사용 or 산술연산을 하나 더 사용
+  padding: 20px % 7;
 }
-.box {
-  width: $size2; // 유효범위를 벗어나서 인식x
+span {
+  font-size: 10px;
+  line-height: 10px;
+  font: 10px / 10px serif; // 단축속성이 있기 때문에 / 기호를 나눗셈으로 x
+}
+.ho {
+  // width: 100% - 200px; // 단위는 맞춰줘야 한다.
+  width: calc(100% - 200px); // 다른 단위의 연산
+  background-color: royalblue;
+  height: 100px;
 }
