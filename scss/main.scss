@@ -1,15 +1,23 @@
-// function! @ 빼면 js랑 유사하다
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@function ratio($size, $ratio) {
-  @return $size * $ratio
-}
+// 내장 색상 함수 mix()
+
 .box {
-  $width: 160px;
-  width: $width;
-  height: ratio($width, 9/16); // 이런식으로 비율(16:9)맞춤에 용이하다.
-  @include center;
+  $color: royalblue;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: $color;
+  &.built-in {
+    background-color: mix($color, red); // 혼합
+    background-color: lighten($color,10%); // 명
+    background-color: darken($color,10%); // 암
+    background-color: saturate($color,10%); // 채도(+)
+    background-color: desaturate($color,10%); // 채도(-)
+    background-color: grayscale($color); // 회색화
+    background-color: invert($color); // 반전효과
+    background-color: rgba($color, .5); // 투명도 효과 -> 4개의 인수가 아닌 2개의 인수만으로 효과를 줄 수 있는 scss
+  }
+  &:hover {
+    background-color: darken($color,10%); // hover를 이용할 때 유용하다.  
+  }
 }
