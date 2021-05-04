@@ -1,23 +1,9 @@
-// 내장 색상 함수 mix()
+@import './sub', './sub2'; // url()을 사용하지 않아도 된다. 간소화된 문법 제공
 
-.box {
-  $color: royalblue;
-  width: 200px;
-  height: 100px;
-  margin: 20px;
-  border-radius: 10px;
-  background-color: $color;
-  &.built-in {
-    background-color: mix($color, red); // 혼합
-    background-color: lighten($color,10%); // 명
-    background-color: darken($color,10%); // 암
-    background-color: saturate($color,10%); // 채도(+)
-    background-color: desaturate($color,10%); // 채도(-)
-    background-color: grayscale($color); // 회색화
-    background-color: invert($color); // 반전효과
-    background-color: rgba($color, .5); // 투명도 효과 -> 4개의 인수가 아닌 2개의 인수만으로 효과를 줄 수 있는 scss
-  }
-  &:hover {
-    background-color: darken($color,10%); // hover를 이용할 때 유용하다.  
-  }
+$color: royalblue;
+
+.container {
+  h1 {
+    color: $color;
+  };
 }
