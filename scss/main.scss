@@ -1,10 +1,15 @@
-// 반복문
-// scss의 보간법(template literal)
-@for $i from 1 through 10 {
-  .box:nth-child(#{$i}) {
-    width: 100px * $i; // 값을 명시하는 부분에는 보간처리x
-  }
+// function! @ 빼면 js랑 유사하다
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-// @for $i from 1 through 32 {
-
-// }
+@function ratio($size, $ratio) {
+  @return $size * $ratio
+}
+.box {
+  $width: 160px;
+  width: $width;
+  height: ratio($width, 9/16); // 이런식으로 비율(16:9)맞춤에 용이하다.
+  @include center;
+}
