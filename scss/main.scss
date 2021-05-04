@@ -1,9 +1,18 @@
-@import './sub', './sub2'; // url()을 사용하지 않아도 된다. 간소화된 문법 제공
+// SCSS Data Type!!
+$number: 1; // .5, 100px, 1em
+$string: bold; // relative, "../images"
+$color: red;
+$boolean: true;
+$null: null;
+$list: orange, royalblue, yellow; // 배열
+$map: ( // 객체 데이터 
+  o: orange,
+  r: royalblue,
+  y: yellow,
+);
 
-$color: royalblue;
-
-.container {
-  h1 {
-    color: $color;
-  };
+.box {
+  width: 100px;
+  color: red;
+  position: relative;
 }
