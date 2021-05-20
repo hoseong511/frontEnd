@@ -2,8 +2,8 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
-$secondary: yellowgreen;
 
+$secondary: yellowgreen;
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
@@ -15,4 +15,4 @@ $theme-colors: (
   "dark":       $dark
 );
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
