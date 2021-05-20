@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "prebuild": "npx rimraf build",
+    "build": "parcel build --public-url ./ ./index.html --experimental-scope-hoisting --out-dir build"
   },
   "keywords": [],
   "author": "",
