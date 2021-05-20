@@ -1,5 +1,5 @@
 ## Starbucks Coffe 홈페이지 프론트엔드 클론
-스타벅스 클론
+스타벅스 [데모](https://hoseong511.github.io/frontEnd/HTML/starbucks/deploy)
 ### 0. 준비
 images, favicon.ico, favicon.png 챙기기
 ### 0.1 오픈그래프 이용
