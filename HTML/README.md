@@ -7,7 +7,7 @@
   <br>
   <a style=" font-size: 13px; " href="https://hoseong511.github.io/frontEnd/HTML/starbucks">Starbucks</a>
   <br>
-  <a style=" font-size: 13px; " href="https://hoseong511.github.io/frontEnd/HTML/bootstrap-test">Starbucks</a>
+  <a style=" font-size: 13px; " href="https://hoseong511.github.io/frontEnd/HTML/bootstrap-test">bootstrap-test</a>
 ## 1. HTML/CSS/JS로 만드는 스타벅스 웹사이트_전체 개요
 ## 2. VS Code
 - tip!! Beautify 플러그인 설치하기! 
