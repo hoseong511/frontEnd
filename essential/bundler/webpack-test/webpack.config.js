@@ -17,8 +17,9 @@ module.exports = {
         test: /\.s?css$/,
         use: [
           'style-loader',
-          'css-loader',
-          'sass-loader'
+          'css-loader', //3
+          'postcss-loader', //2  // 순서가 중요하다.
+          'sass-loader' // 1
         ]
       }
     ]
