@@ -1,0 +1,193 @@
+$color_333 : #333;
+$my_background: #0a0a0a;
+$my_font_color: #65FB65;
+$my_hover_color: rgb(255, 251, 19);
+$my_border_color: rgb(255, 251, 19);
+/* COMMON*/
+
+body {
+  background-color: $my_background;
+  color: $color_333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Roboto mono', monospace, sans-serif;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+.inner {
+  width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background-color: $my_background;
+  >.inner {
+    height: 140px;
+  }
+  .logo {
+    height: 75px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto
+  }
+  .sub-menu {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex;
+    ul.menu {
+      display: flex;
+      font-weight: bold;
+      li {
+        position: relative;
+        &:first-child::before {
+          display: none;
+        }
+        &::before {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 12px;
+          background: $my_hover_color;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+        }
+        a {
+          font-size: 14px;
+          padding: 11px 16px;
+          display: block;
+          color: $my_font_color;
+          &:hover {
+            color: $my_hover_color;
+          }
+        }
+      }
+    }
+    .search {
+      height: 34px;
+      position: relative;
+      input {
+        width: 36px;
+        height: 34px;
+        padding: 4px 10px;
+        border: 3px solid $my_font_color;
+        box-sizing: border-box;
+        border-radius: 5px;
+        outline: none;
+        background-color: $my_background;
+        color: #000;
+        font-size: 12px;
+        transition: width .4s;
+        &:focus {
+          width: 190px;
+          border-color: $my_hover_color;
+        }
+      }
+      .material-icons {
+        height: 24px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 5px;
+        margin: auto;
+        transition: .4s;
+        color: $my_font_color;
+        cursor: pointer;
+        &:hover {
+          color: $my_hover_color;
+        }
+      }
+      &.focused .material-icons {
+        opacity: 0;
+        cursor: default;
+      }
+    }
+  }
+  .main-menu {
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    .item {
+      .item__name {
+        padding: 10px 20px 34px 20px;
+        color: $my_font_color;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      &:hover .item__name {
+        background-color: $my_hover_color;
+        color:$my_background;
+        border-radius: 6px 6px 0 0;
+      }
+    }
+      
+  }  
+}
+.youtube {
+  margin-top: 141px;
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+  .youtube__area {
+    width: 1920px;
+    position: absolute;
+    left: 50%;
+    margin-left: calc(1920px / -2);
+    top: 50%;
+    margin-top: calc(1920px * 9 / 16 / -2);
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: 56.25%;
+    }
+  }
+  .youtube__cover {
+    background: url("./image/video_cover_pattern.png");
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .inner {
+    height: 700px;
+    width: 1920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .floating {
+    position: absolute;
+    font-size: 50px;
+    font-weight: 500;
+    color: $my_font_color;
+    text-align: center;
+  }
+}
+#player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
