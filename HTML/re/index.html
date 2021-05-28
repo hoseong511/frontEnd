@@ -23,9 +23,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="icon" href="./favicon.ico">
   <link rel="stylesheet" href="./main.css">
   <script defer src="./main.js"></script>
@@ -36,7 +40,7 @@
   <header>
     <div class="inner">
       <a class="logo" href="https://github.com/hoseong511" target="_blank" rel="noopener noreferrer">
-        <img src="./src/images/icon.png" alt="logo_reuse">
+        <img src="./images/icon.png" alt="logo_reuse">
       </a>
       <div class="sub-menu">
         <ul class="menu">
@@ -76,77 +80,33 @@
     <div class="youtube__cover"></div>
     <div class="inner">
       <div class="floating">
-        <span>Reusable things make better things possible</span>
+        <p>Reusable things make better things possible</p>
       </div>
     </div>
   </section>
 
   <section class="notice">
-    <div class="notice-line">
-      <div class="bg-left"></div>
-      <div class="bg-right"></div>
-      <div class="inner">
-        <div class="inner__left">
-          <h2>공지사항</h2>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="javascipt:void(0)">크리스마스 & 연말연시 스타벅스 매장 영업시간</a>
-  
-              </div>
-              <div class="swiper-slide">
-                <a href="javascipt:void(0)">스타벅스 매장 영업시간</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="javascipt:void(0)">당첨자 & 연말연시 스타벅스 매장 영업시간</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="javascipt:void(0)">무야호 & 연말연시 스타벅스 매장 영업시간</a>
-              </div>
-            </div>
-            
-          </div>
-          <a href="javascript:void(0)" class="notice-line__more">
-            <div class="material-icons">add_circle</div>
-          </a>
-          
-        </div>
-        <div class="inner__right">
-          <h2>스타벅스 프로모션</h2>
-          <div class="toggle-promotion">
-            <div class="material-icons">upload</div>
-          </div>          
-        </div>
+    <div class="project">
+      <div class="title">
+        <span>Project</span>
       </div>
-    </div>
-    
-    <div class="promotion">
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="./images/promotion_slide1.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
+            <img src="./images/codefamer_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/healthcare_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
             <a href="javascript:void(0)" class="btn">자세히 보기</a>
           </div>
           <div class="swiper-slide">
             <img src="./images/promotion_slide2.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
             <a href="javascript:void(0)" class="btn">자세히 보기</a>
           </div>
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide3.jpg" alt="2021 뉴이어, 스타벅스와 함께현업에서는 꼭 작성하기 alt!" />
-            <a href="javascript:void(0)" class="btn">자세히 보기</a>
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide4.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-            <a href="javascript:void(0)" class="btn">자세히 보기</a>
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide5.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-            <a href="javascript:void(0)" class="btn">자세히 보기</a>
-          </div>
           
         </div>         
       </div>
-      <div class="swiper-pagination"></div>
       <div class="swiper-prev">
         <div class="material-icons">arrow_back</div>
       </div>
@@ -154,8 +114,39 @@
         <div class="material-icons">arrow_forward</div>
       </div>
     </div>
-
   </section>
+
+  <section class="notice">
+    <div class="project">
+      <div class="title">
+        <span>Learned</span>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/codefamer_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/healthcare_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide2.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          
+        </div>         
+      </div>
+      <div class="swiper-prev">
+        <div class="material-icons">arrow_back</div>
+      </div>
+      <div class="swiper-next">
+        <div class="material-icons">arrow_forward</div>
+      </div>
+    </div>
+  </section>
+
   
 </body>
 </html>
