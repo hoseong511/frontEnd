@@ -303,7 +303,6 @@ header .badges .badge {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
   cursor: pointer;
 }
-
 /* VISUAL */
 .visual {
   margin-top: 120px;
@@ -314,12 +313,9 @@ header .badges .badge {
   background-repeat: no-repeat; */
   /* width: 100%;   */
 }
-
 .visual .inner {
   height: 646px;
-  
 }
-
 .visual .title {
   position: absolute;
   top: 88px;
