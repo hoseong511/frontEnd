@@ -13,6 +13,7 @@ body {
   line-height: 1.4;
   font-family: 'Roboto mono', monospace, sans-serif;
 }
+
 img {
   display: block;
 }
@@ -20,10 +21,9 @@ a {
   text-decoration: none;
 }
 .inner {
-  width: 1920px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
-  
 }
 .btn {
   width: 130px;
@@ -49,114 +49,150 @@ header {
   background-color: $my_background;
   >.inner {
     height: 140px;
-    left: 50%;
-    margin-left: calc(1920px / -2);
+    display: flex;
+    justify-content: space-between;
   }
   .logo {
     height: 75px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto
+    margin: 20px;
   }
-  .sub-menu {
-    position: absolute;
-    top: 10px;
-    right: 0;
+  .pc-menu {
+    width: 50%;
     display: flex;
-    ul.menu {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+    margin-right: 20px;
+    .sub-menu {
       display: flex;
-      font-weight: bold;
-      li {
-        position: relative;
-        &:first-child::before {
-          display: none;
+      position: relative;
+      ul.menu {
+        display: flex;
+        font-weight: bold;
+        li {
+          position: relative;
+          &:first-child::before {
+            display: none;
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 12px;
+            background: $my_hover_color;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+          }
+          a {
+            font-size: 14px;
+            padding: 11px 16px;
+            display: block;
+            color: $my_font_color;
+            &:hover {
+              color: $my_hover_color;
+            }
+          }
         }
-        &::before {
-          content: "";
-          display: block;
-          width: 1px;
-          height: 12px;
-          background: $my_hover_color;
+      }
+      .search {
+        height: 34px;
+        input {
+          width: 36px;
+          height: 34px;
+          padding: 4px 10px;
+          border: 3px solid $my_font_color;
+          box-sizing: border-box;
+          border-radius: 5px;
+          outline: none;
+          background-color: $my_background;
+          color: #000;
+          font-size: 12px;
+          transition: width .4s;
+          &:focus {
+            width: 190px;
+            border-color: $my_hover_color;
+          }
+        }
+        .material-icons {
+          height: 24px;
           position: absolute;
-          top: 0;
-          bottom: 0;
-          margin: auto 0;
-        }
-        a {
-          font-size: 14px;
-          padding: 11px 16px;
-          display: block;
+          top: 6px;
+          right: 5px;
+          margin: auto;
+          transition: .4s;
           color: $my_font_color;
+          cursor: pointer;
           &:hover {
             color: $my_hover_color;
           }
         }
+        &.focused .material-icons {
+          opacity: 0;
+          cursor: default;
+        }
       }
     }
-    .search {
-      height: 34px;
-      position: relative;
-      input {
-        width: 36px;
-        height: 34px;
-        padding: 4px 10px;
-        border: 3px solid $my_font_color;
-        box-sizing: border-box;
-        border-radius: 5px;
-        outline: none;
-        background-color: $my_background;
-        color: #000;
-        font-size: 12px;
-        transition: width .4s;
-        &:focus {
-          width: 190px;
-          border-color: $my_hover_color;
+    .main-menu {
+      display: flex;
+      .item {
+        .item__name {
+          padding: 10px 20px 34px 20px;
+          color: $my_font_color;
+          font-size: 20px;
+          font-weight: 600;
+          box-sizing: border-box;
+        }
+        &:hover .item__name {
+          background-color: $my_hover_color;
+          color:$my_background;
+          border-radius: 6px 6px 0 0;
         }
       }
+        
+    }  
+  }
+
+  @media screen and (max-width: 800px){
+    .pc-menu {
+      display: none;
+    }
+    .mobile-menu {
+      margin-top: 30px;
+      margin-right: 20px;
       .material-icons {
-        height: 24px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 5px;
-        margin: auto;
-        transition: .4s;
         color: $my_font_color;
-        cursor: pointer;
-        &:hover {
-          color: $my_hover_color;
-        }
-      }
-      &.focused .material-icons {
-        opacity: 0;
-        cursor: default;
+        font-size: 50px;
       }
     }
   }
-  .main-menu {
-    position: absolute; 
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    display: flex;
-    .item {
-      .item__name {
-        padding: 10px 20px 34px 20px;
-        color: $my_font_color;
-        font-size: 20px;
-        font-weight: 600;
-      }
-      &:hover .item__name {
-        background-color: $my_hover_color;
-        color:$my_background;
-        border-radius: 6px 6px 0 0;
-      }
-    }
-      
-  }  
 }
+section.content_profile {
+  .git-stat {
+    width: 600px;
+    height: 500px;
+    background-image: url("https://github-readme-stats.vercel.app/api?username=hoseong511");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .git-lang {
+    width: 500px;
+    height: 500px;
+    background-image: url("https://github-readme-stats.vercel.app/api/top-langs/?username=hoseong511&exclude_repo=python-lecture,Study,testreact,test&layout=compact");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .git-wakatime {
+    width: 500px;
+    height: 500px;
+    background-image: url("https://github-readme-stats.vercel.app/api/wakatime?username=hoseong511");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+}
+
 .youtube {
   margin-top: 141px;
   position: relative;
@@ -189,22 +225,16 @@ header {
   }
   .inner {
     height: 700px;
-    width: 1920px;
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 50%;
-    margin-left: calc(1920px / -2);
   }
   .floating {
-    font-size: 4em;
+    word-wrap: break-word;
+    font-size: 50px;
     font-weight: 500;
     color: $my_font_color;
     text-align: center;
-    span {
-      word-break: keep-all;
-
-    }
   }
 }
 #player {
@@ -268,6 +298,12 @@ header {
       margin-top: 50px;
     /* 화면이 줄어들때에도 가운데 정렬을 유지하는 방법 */
     }
+    // .swiper-slide {
+    //   width: calc(819px * 3 + 20px);
+    //   height: 553px; 
+    //   background-image: url('./images/codefamer_bg.png');
+    //   background-size: cover;
+    // }
     .swiper-slide {
       opacity: .5;
       transition: opacity 1s;

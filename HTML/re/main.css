@@ -18,7 +18,7 @@ a {
 }
 
 .inner {
-  width: 1920px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -51,44 +51,58 @@ header {
 
 header > .inner {
   height: 140px;
-  left: 50%;
-  margin-left: calc(1920px / -2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header .logo {
   height: 75px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+  margin: 20px;
 }
 
-header .sub-menu {
-  position: absolute;
-  top: 10px;
-  right: 0;
+header .pc-menu {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
-header .sub-menu ul.menu {
+header .pc-menu .sub-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+header .pc-menu .sub-menu ul.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-weight: bold;
 }
 
-header .sub-menu ul.menu li {
+header .pc-menu .sub-menu ul.menu li {
   position: relative;
 }
 
-header .sub-menu ul.menu li:first-child::before {
+header .pc-menu .sub-menu ul.menu li:first-child::before {
   display: none;
 }
 
-header .sub-menu ul.menu li::before {
+header .pc-menu .sub-menu ul.menu li::before {
   content: "";
   display: block;
   width: 1px;
@@ -100,23 +114,22 @@ header .sub-menu ul.menu li::before {
   margin: auto 0;
 }
 
-header .sub-menu ul.menu li a {
+header .pc-menu .sub-menu ul.menu li a {
   font-size: 14px;
   padding: 11px 16px;
   display: block;
   color: #65FB65;
 }
 
-header .sub-menu ul.menu li a:hover {
+header .pc-menu .sub-menu ul.menu li a:hover {
   color: #fffb13;
 }
 
-header .sub-menu .search {
+header .pc-menu .sub-menu .search {
   height: 34px;
-  position: relative;
 }
 
-header .sub-menu .search input {
+header .pc-menu .sub-menu .search input {
   width: 36px;
   height: 34px;
   padding: 4px 10px;
@@ -132,16 +145,15 @@ header .sub-menu .search input {
   transition: width .4s;
 }
 
-header .sub-menu .search input:focus {
+header .pc-menu .sub-menu .search input:focus {
   width: 190px;
   border-color: #fffb13;
 }
 
-header .sub-menu .search .material-icons {
+header .pc-menu .sub-menu .search .material-icons {
   height: 24px;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 6px;
   right: 5px;
   margin: auto;
   -webkit-transition: .4s;
@@ -150,36 +162,72 @@ header .sub-menu .search .material-icons {
   cursor: pointer;
 }
 
-header .sub-menu .search .material-icons:hover {
+header .pc-menu .sub-menu .search .material-icons:hover {
   color: #fffb13;
 }
 
-header .sub-menu .search.focused .material-icons {
+header .pc-menu .sub-menu .search.focused .material-icons {
   opacity: 0;
   cursor: default;
 }
 
-header .main-menu {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
+header .pc-menu .main-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header .main-menu .item .item__name {
+header .pc-menu .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
   color: #65FB65;
   font-size: 20px;
   font-weight: 600;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-header .main-menu .item:hover .item__name {
+header .pc-menu .main-menu .item:hover .item__name {
   background-color: #fffb13;
   color: #0a0a0a;
   border-radius: 6px 6px 0 0;
+}
+
+@media screen and (max-width: 800px) {
+  header .pc-menu {
+    display: none;
+  }
+  header .mobile-menu {
+    margin-top: 30px;
+    margin-right: 20px;
+  }
+  header .mobile-menu .material-icons {
+    color: #65FB65;
+    font-size: 50px;
+  }
+}
+
+section.content_profile .git-stat {
+  width: 600px;
+  height: 500px;
+  background-image: url("https://github-readme-stats.vercel.app/api?username=hoseong511");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+section.content_profile .git-lang {
+  width: 500px;
+  height: 500px;
+  background-image: url("https://github-readme-stats.vercel.app/api/top-langs/?username=hoseong511&exclude_repo=python-lecture,Study,testreact,test&layout=compact");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+section.content_profile .git-wakatime {
+  width: 500px;
+  height: 500px;
+  background-image: url("https://github-readme-stats.vercel.app/api/wakatime?username=hoseong511");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .youtube {
@@ -218,7 +266,6 @@ header .main-menu .item:hover .item__name {
 
 .youtube .inner {
   height: 700px;
-  width: 1920px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,19 +275,14 @@ header .main-menu .item:hover .item__name {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  left: 50%;
-  margin-left: calc(1920px / -2);
 }
 
 .youtube .floating {
-  font-size: 4em;
+  word-wrap: break-word;
+  font-size: 50px;
   font-weight: 500;
   color: #65FB65;
   text-align: center;
-}
-
-.youtube .floating span {
-  word-break: keep-all;
 }
 
 #player {
