@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 .inner {
-  width: 1100px;  
+  width: 80%;  
   margin: 0 auto;
   position: relative;
 }
@@ -112,151 +112,186 @@ header {
   z-index: 9;
   >.inner {
     height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .logo {
     height: 75px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;  
-    margin: auto;
-    /* display: none; */
+    margin: 20px;
   }
-  .sub-menu {
-    position: absolute;
-    top: 10px;
-    right: 0;
+  .pc-menu {
+    width: 80%;
     display: flex;
-    ul.menu {
-      font-family: Arial, sans-serif;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+    margin-right: 20px;
+    .sub-menu {
       display: flex;
-      li{
-        position: relative;
-        &:first-child::before{
-          display: none;
-        }
-        &::before{
-          content:"";
-          display: block;
-          width: 1px;
-          height: 12px;
-          background-color: #e5e5e5;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          margin: auto 0;
-        }
-        a{  
-          font-size: 12px;
-          padding: 11px 16px;
-          display: block;
-          color: #656565;  
-          &:hover{
-            color: #000;
+      position: relative;
+      ul.menu {
+        font-family: Arial, sans-serif;
+        display: flex;
+        li{
+          position: relative;
+          &:first-child::before{
+            display: none;
+          }
+          &::before{
+            content:"";
+            display: block;
+            width: 1px;
+            height: 12px;
+            background-color: #e5e5e5;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+          }
+          a{  
+            font-size: 12px;
+            padding: 11px 16px;
+            display: block;
+            color: #656565;  
+            &:hover{
+              color: #000;
+            }
           }
         }
       }
-    }
-    .search {   
-      height: 34px;
-      position: relative;
-      input{
-        width: 36px;
+      .search {   
         height: 34px;
-        padding: 4px 10px;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-        border-radius: 5px;
-        outline: none;
-        background-color: #fff;
-        color: #777;
-        font-size: 12px;
-        transition: width .4s;
-        &:focus {
-          width: 190px;
-          border-color: #669900;
+        position: relative;
+        input{
+          width: 36px;
+          height: 34px;
+          padding: 4px 10px;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          border-radius: 5px;
+          outline: none;
+          background-color: #fff;
+          color: #777;
+          font-size: 12px;
+          transition: width .4s;
+          &:focus {
+            width: 190px;
+            border-color: #669900;
+          }
+        }
+        .material-icons{
+          height: 24px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 5px;
+          margin: auto;
+          transition: .4s;
+          cursor: pointer;
+        }
+        &.focused .material-icons{
+          opacity: 0;
+          cursor: default;
         }
       }
-      .material-icons{
-        height: 24px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 5px;
-        margin: auto;
-        transition: .4s;
-        cursor: pointer;
-      }
-      &.focused .material-icons{
-        opacity: 0;
-        cursor: default;
-      }
     }
-  }
-  .main-menu {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    display: flex;
-    .item {
-      .item__name {
-        padding: 10px 20px 34px 20px;
-        font-family: Arial, sans-serif;
-        font-size: 13px;
-      }
-      &:hover .item__name {
-        background-color: #2c2a29;
-        color: #669900;
-        border-radius: 6px 6px 0 0;
-      }
-      .item__contents {
-        width: 100%;
-        position: fixed;
-        left: 0;
-        display: none;
-        .contents__menu {
+    .main-menu {
+      display: flex;
+      .item {
+        .item__name {
+          padding: 10px 20px 34px 20px;
+          font-family: Arial, sans-serif;
+          font-size: 13px;
+        }
+        &:hover .item__name {
           background-color: #2c2a29;
-          height: auto;
-          & > ul {
-            display: flex;
-            padding: 20px 0;
-            & > li {
-              width: 220px;
-              h4 {
-                padding:  3px 0 12px 0;
-                font-size: 14px;
-                color: #fff;
-              }
-              ul li {
-                padding: 5px 0;
-                font-size: 12px;
-                color: #999;
-                cursor: pointer;
-                &:hover {
-                  color: #669900;
+          color: #669900;
+          border-radius: 6px 6px 0 0;
+        }
+        .item__contents {
+          width: 100%;
+          position: fixed;
+          left: 0;
+          display: none;
+          .contents__menu {
+            background-color: #2c2a29;
+            height: auto;
+            & > ul {
+              display: flex;
+              padding: 20px 0;
+              & > li {
+                width: 220px;
+                h4 {
+                  padding:  3px 0 12px 0;
+                  font-size: 14px;
+                  color: #fff;
+                }
+                ul li {
+                  padding: 5px 0;
+                  font-size: 12px;
+                  color: #999;
+                  cursor: pointer;
+                  &:hover {
+                    color: #669900;
+                  }
                 }
               }
             }
           }
-        }
-        .contents__texture {
-          padding: 26px 0;  
-          font-size: 12px;
-          background-image: url("../images/main_menu_pattern.jpg");
-          h4 {
-            color: #999;
-            font-weight: 700;
-          }
-          p {
-            color: #669900;
-            margin: 4px 0 14px;
+          .contents__texture {
+            padding: 26px 0;  
             font-size: 12px;
+            background-image: url("../images/main_menu_pattern.jpg");
+            h4 {
+              color: #999;
+              font-weight: 700;
+            }
+            p {
+              color: #669900;
+              margin: 4px 0 14px;
+              font-size: 12px;
+            }
           }
+        }
+        &:hover .item__contents {
+          display: block;
         }
       }
-      &:hover .item__contents {
-        display: block;
+    }
+  }
+  @media screen and (max-width: 1200px){
+    .pc-menu {
+      display: none;
+    }
+    .mobile-menu {
+      width: 150px;
+      display: flex;
+      justify-content: space-between;
+      .mobile-icon1 {
+        background-image: url("https://www.starbucks.co.kr/common/img/common/icon_user_m.png");
+        background-size: cover;
+        background-position: top left;
+        height: 30px;
+        width: 25px;
+        cursor: pointer;
+      }
+      .mobile-icon2 {
+        background-image: url("https://www.starbucks.co.kr/common/img/common/icon_spot_m.png");
+        background-size: cover;
+        background-position: top;
+        height: 32px;
+        width: 25px;
+        cursor: pointer;
+      }
+      .mobile-icon3 {
+        background-image: url("https://www.starbucks.co.kr/common/img/common/btn_berger_m.png");
+        background-size: cover;
+        background-position: top right;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 25px;
+        cursor: pointer;
       }
     }
   }
