@@ -23,9 +23,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="icon" href="./favicon.ico">
   <link rel="stylesheet" href="./main.css">
   <script defer src="./main.js"></script>
@@ -38,124 +42,153 @@
       <a class="logo" href="https://github.com/hoseong511" target="_blank" rel="noopener noreferrer">
         <img src="./images/icon.png" alt="logo_reuse">
       </a>
-      <div class="sub-menu">
-        <ul class="menu">
-          <li><a href="https://github.com/hoseong511" target="_blank" rel="noopener noreferrer">Github</a></li>
-          <li><a href="https://replit.com/@hoseong511" target="_blank" rel="noopener noreferrer">repl.it</a></li>
-          <li><a href="https://codepen.io/hoseong511" target="_blank" rel="noopener noreferrer">codepen</a></li>
-          <li><a href="javascript:void(0)">mooyaho~</a></li>
+      <nav class="mobile-menu">
+        <div class="material-icons">menu</div>
+      </nav>
+      <nav class="pc-menu">
+        <div class="sub-menu">
+          <ul class="menu">
+            <li><a href="https://github.com/hoseong511" target="_blank" rel="noopener noreferrer">Github</a></li>
+            <li><a href="https://replit.com/@hoseong511" target="_blank" rel="noopener noreferrer">repl.it</a></li>
+            <li><a href="https://codepen.io/hoseong511" target="_blank" rel="noopener noreferrer">codepen</a></li>
+            <li><a href="javascript:void(0)">mooyaho~</a></li>
+          </ul>
+          <div class="search">
+            <input type="text" />
+            <div class="material-icons">search</div>
+          </div>
+        </div>
+        <ul class="main-menu">
+          <li class="item">
+            <div class="item__name">Profile</div>          
+          </li>
+          <li class="item">
+            <div class="item__name">Project</div>
+          </li>
+          <li class="item">
+            <div class="item__name">Learned</div>
+          </li>
+          <li class="item">
+            <div class="item__name">Contact</div>
+          </li>
         </ul>
-        <div class="search">
-          <input type="text" />
-          <div class="material-icons">search</div>
+      </nav>
+  </header>
+  <div class="contents">
+    <!-- <section class="youtube">
+      <div class="youtube__area">
+        <div id="player"></div>
+      </div>
+      <div class="youtube__cover"></div>
+      <div class="inner">
+        <div class="floating">
+          Reusable things make better things possible
         </div>
       </div>
-      <ul class="main-menu">
-        <li class="item">
-          <div class="item__name">Home</div>          
-        </li>
-        <li class="item">
-          <div class="item__name">About</div>
-        </li>
-        <li class="item">
-          <div class="item__name">Project</div>
-        </li>
-        <li class="item">
-          <div class="item__name">Learned</div>
-        </li>
-        <li class="item">
-          <div class="item__name">Contact</div>
-        </li>
-      </ul>
-  </header>
-
-  <section class="youtube">
-    <div class="youtube__area">
-      <div id="player"></div>
-    </div>
-    <div class="youtube__cover"></div>
-    <div class="inner">
-      <div class="floating">
-        <span>Reusable things make better things possible</span>
+    </section> 
+      
+    <section class="notice">
+      <div class="project">
+        <div class="title">
+          <span>Project</span>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/codefamer_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
+              <a href="javascript:void(0)" class="btn">자세히 보기</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/healthcare_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
+              <a href="javascript:void(0)" class="btn">자세히 보기</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/promotion_slide2.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
+              <a href="javascript:void(0)" class="btn">자세히 보기</a>
+            </div>
+          </div>         
+        </div>
+        <div class="swiper-prev">
+          <div class="material-icons">arrow_back</div>
+        </div>
+        <div class="swiper-next">
+          <div class="material-icons">arrow_forward</div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="notice">
-    <div class="notice-line">
-      <div class="bg-left"></div>
-      <div class="bg-right"></div>
-      <div class="inner">
-        <div class="inner__left">
-          <h2>공지사항</h2>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="javascipt:void(0)">크리스마스 & 연말연시 스타벅스 매장 영업시간</a>
-  
-              </div>
-              <div class="swiper-slide">
-                <a href="javascipt:void(0)">스타벅스 매장 영업시간</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="javascipt:void(0)">당첨자 & 연말연시 스타벅스 매장 영업시간</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="javascipt:void(0)">무야호 & 연말연시 스타벅스 매장 영업시간</a>
-              </div>
+    </section>
+    
+    <section class="notice">
+      <div class="project">
+        <div class="title">
+          <span>Learned</span>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/codefamer_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
+              <a href="javascript:void(0)" class="btn">자세히 보기</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/healthcare_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
+              <a href="javascript:void(0)" class="btn">자세히 보기</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/promotion_slide2.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
+              <a href="javascript:void(0)" class="btn">자세히 보기</a>
             </div>
             
-          </div>
-          <a href="javascript:void(0)" class="notice-line__more">
-            <div class="material-icons">add_circle</div>
-          </a>
-          
+          </div>         
         </div>
-        <div class="inner__right">
-          <h2>스타벅스 프로모션</h2>
-          <div class="toggle-promotion">
-            <div class="material-icons">upload</div>
-          </div>          
+        <div class="swiper-prev">
+          <div class="material-icons">arrow_back</div>
+        </div>
+        <div class="swiper-next">
+          <div class="material-icons">arrow_forward</div>
         </div>
       </div>
-    </div>
-    
-    <div class="promotion">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide1.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+    </section> -->
+    <section class="content_profile">
+      <div class="profile left">
+        <div class="photo">
+          <div class="photo__me">
           </div>
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide2.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-            <a href="javascript:void(0)" class="btn">자세히 보기</a>
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide3.jpg" alt="2021 뉴이어, 스타벅스와 함께현업에서는 꼭 작성하기 alt!" />
-            <a href="javascript:void(0)" class="btn">자세히 보기</a>
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide4.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-            <a href="javascript:void(0)" class="btn">자세히 보기</a>
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/promotion_slide5.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-            <a href="javascript:void(0)" class="btn">자세히 보기</a>
-          </div>
-          
-        </div>         
+        </div>
+        <div class="info">
+          <ul class="info__name">
+            <li>Hoseong Song</li>
+            <li><a href="mailto:thdghtjd115@gmail.com" target="_blank" rel="noopener noreferrer">thdghtjd115@gmail.com</a></li>
+            <li>Seoul, Republic of Korea</li>
+          </ul>
+          <ul class="info__contact">
+            <li><a href="https://github.com/hoseong511" target="_blank" rel="noopener noreferrer">Github</a></li>
+            <li><a href="https://replit.com/@hoseong511" target="_blank" rel="noopener noreferrer">repl.it</a></li>
+            <li><a href="https://codepen.io/hoseong511" target="_blank" rel="noopener noreferrer">codepen</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-prev">
-        <div class="material-icons">arrow_back</div>
+      <div class="profile right">
+        <div class="intro">
+          <ul class="intro_me">
+            <li>Hello I'm Hoseong</li>
+            <li>Learning FullStack..! and I like ...</li>
+            <li>lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+          </ul>
+        </div>
+        <div class="git">
+          <div class="git-lang"></div>
+        </div>
       </div>
-      <div class="swiper-next">
-        <div class="material-icons">arrow_forward</div>
-      </div>
-    </div>
+    </section> 
+    <section class="content_gitmgmt">
+      <div class="git-stat"></div>
+    </section>
+    <section class="content_project">
 
-  </section>
-  
-</body>
+    </section> 
+    <section class="content_learned"></section>
+    <section class="content_contact"></section>
+  </div>
+    
+    
+  </body>
 </html>
