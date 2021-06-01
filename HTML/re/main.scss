@@ -1,9 +1,13 @@
 $color_333 : #333;
-$my_background: #0a0a0a;
-$my_font_color: #65FB65;
-$my_hover_color: rgb(255, 251, 19);
+$my_background: #E6E8EA;
+$my_font_color: #7D7D7D;
+$my_hover_color: #333;
 $my_border_color: rgb(255, 251, 19);
 /* COMMON*/
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: $my_background;
@@ -92,6 +96,7 @@ header {
             color: $my_font_color;
             &:hover {
               color: $my_hover_color;
+              font-weight: 700;
             }
           }
         }
@@ -153,7 +158,11 @@ header {
         
     }  
   }
-
+  @media screen and (min-width: 800px) {
+    .mobile-menu {
+      display: none;
+    }
+  }
   @media screen and (max-width: 800px){
     .pc-menu {
       display: none;
@@ -168,7 +177,62 @@ header {
     }
   }
 }
+.contents {
+  padding: 0 100px 0 ;
+}
 section.content_profile {
+  position: absolute;
+  top: 140px;
+  height: 646px;
+  display: flex;
+  flex-wrap: wrap;
+  .profile {
+    display: flex;
+    flex-direction: column;
+    &.left {
+      margin-left: 20px;
+    }
+    &.right {
+      display: flex;
+      flex-direction: column;
+      .intro {
+  
+      }
+      .git {
+        .git-lang {
+          width: 500px;
+          height: 500px;
+          background-image: url("https://github-readme-stats.vercel.app/api/top-langs/?username=hoseong511&exclude_repo=python-lecture,Study,testreact,test&layout=compact");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    .photo {
+      .photo__me {
+        border-radius: 50%;
+        background-image: url("https://avatars.githubusercontent.com/u/62678380?v=4");
+        background-size: contain;
+        width: 260px;
+        height: 260px;
+      }
+    }
+    .info {
+      .info__name {
+        li {
+          &:first-child {
+            font-size: 20px;
+            color: #333;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  .profile_right {
+    
+  }
+  
   .git-stat {
     width: 600px;
     height: 500px;
@@ -176,13 +240,7 @@ section.content_profile {
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .git-lang {
-    width: 500px;
-    height: 500px;
-    background-image: url("https://github-readme-stats.vercel.app/api/top-langs/?username=hoseong511&exclude_repo=python-lecture,Study,testreact,test&layout=compact");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+  
   .git-wakatime {
     width: 500px;
     height: 500px;
@@ -192,6 +250,7 @@ section.content_profile {
   }
   
 }
+
 
 .youtube {
   margin-top: 141px;

@@ -1,7 +1,12 @@
 @charset "UTF-8";
 /* COMMON*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  background-color: #0a0a0a;
+  background-color: #E6E8EA;
   color: #333;
   font-size: 16px;
   font-weight: 400;
@@ -46,7 +51,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 9;
-  background-color: #0a0a0a;
+  background-color: #E6E8EA;
 }
 
 header > .inner {
@@ -107,7 +112,7 @@ header .pc-menu .sub-menu ul.menu li::before {
   display: block;
   width: 1px;
   height: 12px;
-  background: #fffb13;
+  background: #333;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -118,11 +123,12 @@ header .pc-menu .sub-menu ul.menu li a {
   font-size: 14px;
   padding: 11px 16px;
   display: block;
-  color: #65FB65;
+  color: #7D7D7D;
 }
 
 header .pc-menu .sub-menu ul.menu li a:hover {
-  color: #fffb13;
+  color: #333;
+  font-weight: 700;
 }
 
 header .pc-menu .sub-menu .search {
@@ -133,12 +139,12 @@ header .pc-menu .sub-menu .search input {
   width: 36px;
   height: 34px;
   padding: 4px 10px;
-  border: 3px solid #65FB65;
+  border: 3px solid #7D7D7D;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 5px;
   outline: none;
-  background-color: #0a0a0a;
+  background-color: #E6E8EA;
   color: #000;
   font-size: 12px;
   -webkit-transition: width .4s;
@@ -147,7 +153,7 @@ header .pc-menu .sub-menu .search input {
 
 header .pc-menu .sub-menu .search input:focus {
   width: 190px;
-  border-color: #fffb13;
+  border-color: #333;
 }
 
 header .pc-menu .sub-menu .search .material-icons {
@@ -158,12 +164,12 @@ header .pc-menu .sub-menu .search .material-icons {
   margin: auto;
   -webkit-transition: .4s;
   transition: .4s;
-  color: #65FB65;
+  color: #7D7D7D;
   cursor: pointer;
 }
 
 header .pc-menu .sub-menu .search .material-icons:hover {
-  color: #fffb13;
+  color: #333;
 }
 
 header .pc-menu .sub-menu .search.focused .material-icons {
@@ -179,7 +185,7 @@ header .pc-menu .main-menu {
 
 header .pc-menu .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
-  color: #65FB65;
+  color: #7D7D7D;
   font-size: 20px;
   font-weight: 600;
   -webkit-box-sizing: border-box;
@@ -187,9 +193,15 @@ header .pc-menu .main-menu .item .item__name {
 }
 
 header .pc-menu .main-menu .item:hover .item__name {
-  background-color: #fffb13;
-  color: #0a0a0a;
+  background-color: #333;
+  color: #E6E8EA;
   border-radius: 6px 6px 0 0;
+}
+
+@media screen and (min-width: 800px) {
+  header .mobile-menu {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -201,23 +213,76 @@ header .pc-menu .main-menu .item:hover .item__name {
     margin-right: 20px;
   }
   header .mobile-menu .material-icons {
-    color: #65FB65;
+    color: #7D7D7D;
     font-size: 50px;
   }
+}
+
+.contents {
+  padding: 0 100px 0;
+}
+
+section.content_profile {
+  position: absolute;
+  top: 140px;
+  height: 646px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.content_profile .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.content_profile .profile.left {
+  margin-left: 20px;
+}
+
+section.content_profile .profile.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.content_profile .profile.right .git .git-lang {
+  width: 500px;
+  height: 500px;
+  background-image: url("https://github-readme-stats.vercel.app/api/top-langs/?username=hoseong511&exclude_repo=python-lecture,Study,testreact,test&layout=compact");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+section.content_profile .profile .photo .photo__me {
+  border-radius: 50%;
+  background-image: url("https://avatars.githubusercontent.com/u/62678380?v=4");
+  background-size: contain;
+  width: 260px;
+  height: 260px;
+}
+
+section.content_profile .profile .info .info__name li:first-child {
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
 }
 
 section.content_profile .git-stat {
   width: 600px;
   height: 500px;
   background-image: url("https://github-readme-stats.vercel.app/api?username=hoseong511");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-section.content_profile .git-lang {
-  width: 500px;
-  height: 500px;
-  background-image: url("https://github-readme-stats.vercel.app/api/top-langs/?username=hoseong511&exclude_repo=python-lecture,Study,testreact,test&layout=compact");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -281,7 +346,7 @@ section.content_profile .git-wakatime {
   word-wrap: break-word;
   font-size: 50px;
   font-weight: 500;
-  color: #65FB65;
+  color: #7D7D7D;
   text-align: center;
 }
 
@@ -353,7 +418,7 @@ section.content_profile .git-wakatime {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #65FB65;
+  color: #7D7D7D;
   font-size: 50px;
 }
 
