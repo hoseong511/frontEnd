@@ -187,7 +187,7 @@ header .main-menu .item:hover .item__name {
 }
 
 .youtube .youtube__cover {
-  background: url("./image/video_cover_pattern.png");
+  background: url("./images/video_cover_pattern.png");
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0;
