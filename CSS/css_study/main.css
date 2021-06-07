@@ -1,0 +1,221 @@
+body {
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  padding: 20px;
+}
+.card {
+  width: 150px;
+  height: 220px;
+  perspective: 600px;
+  margin-right: 15px;
+  position: relative;
+}
+.card:last-child {
+  margin-right: 0;
+}
+.card .face {
+  width: 150px;
+  height: 220px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: white;
+}
+.card .face-front {
+  background-image: url("https://heropy.blog/css/images/pattern.png");
+  transform: rotateY(0deg);
+}
+.card:active .face-front {
+  transform: rotateY(-180deg);
+}
+.card .face-back {
+  transform: rotateY(180deg);
+}
+.card:active .face-back {
+  transform: rotateY(0deg);
+}
+.card .face-front img {
+  width: 90px;
+  filter: grayscale();
+  opacity: .7;
+}
+.card .face-back img {
+  height: 120px;
+}
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+}
+.box1:hover {
+  animation: first-animation 2s infinite alternate;
+}
+
+@keyframes first-animation {
+  0% {
+    width: 100px;
+  }
+  100% {
+    width: 500px;
+  }
+}
+.box2 {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  background: royalblue;
+  border-radius: 10px;
+  animation: my-animation 8s infinite;
+  animation-timing-function: linear;
+}
+.box2:hover {
+  animation-name: my-animation;
+  animation-duration: 3s; /*단축속성 animation의 개별속성*/
+}
+@keyframes my-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.animation-timing {
+  display: flex;
+  position: relative;
+}
+.box3 {
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box3-1 { background: gray; }
+.box3-2 { background: dodgerblue; }
+.box3-3 { background: yellowgreen; }
+
+.box3-1:hover {
+  animation: size-up 1s infinite alternate;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+/* duration 보다 뒤에 위치하는 delay */
+}
+.box3-2:hover {
+  animation: size-up 1s infinite alternate;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+}
+.box3-3:hover {
+  animation: size-up 1s infinite alternate;
+  animation-timing-function: linear;
+  animation-delay: -1s;
+}
+
+@keyframes size-up {
+  0% {
+    height: 150px;
+  }
+  100% {
+    height: 500px;
+  }
+}
+.box4 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 10px;
+  margin: 30px;
+  animation: move 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+@keyframes move {
+  0% {
+    transform: translate(0,0);
+  }
+  25% {
+    transform: translate(100px,0);
+  }
+  50% {
+    transform: translate(100px,100px);
+  }
+  75% {
+    transform: translate(0,100px);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+.box5 {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  border-radius: 10px;
+  margin: 30px;
+  animation: move2 2s 2s;
+  /* animation-fill-mode: both; */
+}
+@keyframes move2 {
+  0% {
+    transform: translate(100px, 100px);
+    background: dodgerblue;
+  }
+  100% {
+    transform: translate(300px, 100px);
+    background: yellowgreen;
+  }
+}
+.box6 {
+  width: 150px;
+  height: 100px;
+  background: rebeccapurple;
+  border-radius: 10px;
+  animation: size-up 3s linear infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box6::before {
+  content: 'running';
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+}
+.box6:hover {
+  animation-play-state: paused;
+  background: dodgerblue;
+}
+.box6:hover::before {
+  content: 'paused';
+}
+
+@keyframes size-up {
+  0% {
+    width: 150px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+p {
+  color: red;
+  text-align: justify;
+  columns: 150px 3;
+  column-gap: 20px;
+  column-rule: 2px solid;
+}
