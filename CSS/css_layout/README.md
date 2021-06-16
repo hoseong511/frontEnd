@@ -27,13 +27,14 @@
   Click!</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
+
 - 화면 크기에 따라서 형식이 보존되지 않는다.
 
 ### 1.1 First Rule of Flexbox
-1. flex를 이용하기 위해서는 container>item 기억!
-  - 부모요소에 display: flex;
-  - 부모요소를 통해서 배치를 조작한다.
-    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="mdWaNVx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="mdWaNVx">
+- flex를 이용하기 위해서는 container>item 기억!
+- 부모요소에 display: flex;
+- 부모요소를 통해서 배치를 조작한다.
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="mdWaNVx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="mdWaNVx">
     <span>See the Pen <a href="https://codepen.io/hoseong511/pen/mdWaNVx">
     Click!</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
     on <a href="https://codepen.io">CodePen</a>.</span>
@@ -44,10 +45,10 @@
 - main-axis의 item들을 배치하는 속성은 justify-content,
 cross-axis는 align-items
   <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="RwpEXKM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="RwpEXKM">
-    <span>See the Pen <a href="https://codepen.io/hoseong511/pen/RwpEXKM">
-    Click!</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
-    on <a href="https://codepen.io">CodePen</a>.</span>
-  </p>
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/RwpEXKM">
+  Click!</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 
 ### 1.3 Column and Row
 - flex-direction: column; 으로 바꾸면 main-axis가 vertical로 바뀐다.
@@ -79,13 +80,53 @@ cross-axis는 align-items
 </p>
 
 ### 1.6 flex-grow, flex-shrink
+- flex-grow: 2; 커지는 비율을 2배
+- flex-shrink: 2; 작아지는 비율을 2배
+- 반응형 웹 페이지에 꼭 필요한 속성(property)! -> 화면크기가 커지면 요소들도 같이 커진다.
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="LYWqPGJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="flex-shrink, flex-grow">
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/LYWqPGJ">
+  flex-shrink, flex-grow</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
 ### 1.7 flex-basis
+- item들에 이용하는 속성
+- main-axis를 따라간다.
+- 늘거나 줄기 전 초기 크기를 지정한다.
+- flex-grow 값이 우선 적용된다.
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="vYxbBmw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="vYxbBmw">
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/vYxbBmw">
+  Click</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
 ### 1.8 Flexbox Froggy
-### 1.9 Flexbox Froggy
+- flex-flow 는 flex-wrap, flex-direction의 단축속성이다.
+- 이런것도 있네.. 신기하다
+  ![image](https://user-images.githubusercontent.com/62678380/122174746-ecaf8a00-cebd-11eb-90ae-fa18cb39ed8a.png)
+
 ---
 ## GRID
 ### 2.1 Life Before Grid
+- flexbox에서 gird를 만들기 어렵다.
+- space-between 때문에 4와 5가 띄어져있다.
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="MWpLWmz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="flex-&amp;gt;grid">
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/MWpLWmz">
+  flex-&gt;grid</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
 ### 2.2 CSS Grid Basic Concepts 
+- display: grid;
+- grid-template-rows
+- grid-template-columns
+- row-gap, column-gap
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="RwpvwQp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="grid-template">
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/RwpvwQp">
+  grid-template</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
 ### 2.3 Grid Template Areas 
 ### 2.4 Rows and Columns 
 ### 2.5 Shortcuts 
