@@ -15,27 +15,56 @@
   - VScode
   - Chrome 브라우저
   - Node.js(SCSS를 CSS로 변환 시 필요)
-
+---
 ## FLEXBOX
 ### 1.0 FLEXBOX 이전에 사용되었던 기술
-- inline-block   
-  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="rNyoJVY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="rNyoJVY">
+- inline-block 이다 보니 상자 옆 여백이 있다.   
+ 여백은 부모 요소에 font-size를 0 으로 만들면 사라진다.   
+
+- :nth-child()를 이용해서 개별적으로 조작해야 한다.
+  <p class="codepen" data-height="264" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="rNyoJVY" style="height: 264px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="rNyoJVY">
   <span>See the Pen <a href="https://codepen.io/hoseong511/pen/rNyoJVY">
-  rNyoJVY</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  Click!</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-- 
+- 화면 크기에 따라서 형식이 보존되지 않는다.
+
 ### 1.1 First Rule of Flexbox
+1. flex를 이용하기 위해서는 container>item 기억!
+  - 부모요소에 display: flex;
+  - 부모요소를 통해서 배치를 조작한다.
+    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="mdWaNVx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="mdWaNVx">
+    <span>See the Pen <a href="https://codepen.io/hoseong511/pen/mdWaNVx">
+    Click!</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+
 ### 1.2 Main Axis and Cross Axis
+- flex-direction: row; 이면 main-axis는 horizontal, cross-axis는 vertical
+- main-axis의 item들을 배치하는 속성은 justify-content,
+cross-axis는 align-items
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="RwpEXKM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="RwpEXKM">
+    <span>See the Pen <a href="https://codepen.io/hoseong511/pen/RwpEXKM">
+    Click!</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+
 ### 1.3 Column and Row
+- flex-direction: column; 으로 바꾸면 main-axis가 vertical로 바뀐다.
+- main-axis의 item 배치하는 속성은 justify-content, vertical 방향으로 justify-content
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="RwpEXKM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="RwpEXKM">
+    <span>See the Pen <a href="https://codepen.io/hoseong511/pen/RwpEXKM">
+    Click!</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+     
 ### 1.4 align-self and order
 ### 1.5 wrap, nowrap, reverse, align-content
 ### 1.6 flex-grow, flex-shrink
 ### 1.7 flex-basis
 ### 1.8 Flexbox Froggy
 ### 1.9 Flexbox Froggy
-
+---
 ## GRID
 ### 2.1 Life Before Grid
 ### 2.2 CSS Grid Basic Concepts 
