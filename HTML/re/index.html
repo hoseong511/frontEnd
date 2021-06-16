@@ -43,8 +43,30 @@
         <img src="./images/icon.png" alt="logo_reuse">
       </a>
       <nav class="mobile-menu">
-        <div class="material-icons">menu</div>
+        <div class="dropdown-pc">
+          <div class="dropdown-pc-wrapper">
+          <button class="dropdown-pc-menu"><div class="material-icons">menu</div></button>
+              <ul class="dropdown-pc-list">
+                <li class="dropdown-pc-item"><button class="dropdown-pc-sub">1</button></li>
+                <li class="dropdown-pc-item selected"><button class="dropdown-pc-sub">2</button></li>
+                <li class="dropdown-pc-item"><button class="dropdown-pc-sub">3</button></li>
+                <li class="dropdown-pc-item"><button class="dropdown-pc-sub">4</button></li>
+                <li class="dropdown-pc-item"><button class="dropdown-pc-sub">5</button></li>
+              </ul>
+          </div>
+        </div>
       </nav>
+      
+      <div class="dropdown-mobile">
+        <select name="" id="" class="dropdown-mobile-main">
+          <option value="">옵션선택하기</option>
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+        </select>
+      </div>
       <nav class="pc-menu">
         <div class="sub-menu">
           <ul class="menu">
@@ -75,78 +97,6 @@
       </nav>
   </header>
   <div class="contents">
-    <!-- <section class="youtube">
-      <div class="youtube__area">
-        <div id="player"></div>
-      </div>
-      <div class="youtube__cover"></div>
-      <div class="inner">
-        <div class="floating">
-          Reusable things make better things possible
-        </div>
-      </div>
-    </section> 
-      
-    <section class="notice">
-      <div class="project">
-        <div class="title">
-          <span>Project</span>
-        </div>
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./images/codefamer_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-              <a href="javascript:void(0)" class="btn">자세히 보기</a>
-            </div>
-            <div class="swiper-slide">
-              <img src="./images/healthcare_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-              <a href="javascript:void(0)" class="btn">자세히 보기</a>
-            </div>
-            <div class="swiper-slide">
-              <img src="./images/promotion_slide2.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-              <a href="javascript:void(0)" class="btn">자세히 보기</a>
-            </div>
-          </div>         
-        </div>
-        <div class="swiper-prev">
-          <div class="material-icons">arrow_back</div>
-        </div>
-        <div class="swiper-next">
-          <div class="material-icons">arrow_forward</div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="notice">
-      <div class="project">
-        <div class="title">
-          <span>Learned</span>
-        </div>
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./images/codefamer_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-              <a href="javascript:void(0)" class="btn">자세히 보기</a>
-            </div>
-            <div class="swiper-slide">
-              <img src="./images/healthcare_bg.png" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-              <a href="javascript:void(0)" class="btn">자세히 보기</a>
-            </div>
-            <div class="swiper-slide">
-              <img src="./images/promotion_slide2.jpg" alt="2021 뉴이어, 스타벅스와 함께 현업에서는 꼭 작성하기 alt!" />
-              <a href="javascript:void(0)" class="btn">자세히 보기</a>
-            </div>
-            
-          </div>         
-        </div>
-        <div class="swiper-prev">
-          <div class="material-icons">arrow_back</div>
-        </div>
-        <div class="swiper-next">
-          <div class="material-icons">arrow_forward</div>
-        </div>
-      </div>
-    </section> -->
     <section class="content_profile">
       <div class="profile left">
         <div class="photo">
@@ -179,11 +129,9 @@
         </div>
       </div>
     </section> 
-    <section class="content_gitmgmt">
-      <div class="git-stat"></div>
-    </section>
+    
     <section class="content_project">
-
+      
     </section> 
     <section class="content_learned"></section>
     <section class="content_contact"></section>
