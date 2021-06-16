@@ -1,3 +1,16 @@
+  <strong align="center" >
+    <h1>CSS Layout Master</h1>
+    <div align="center">
+      <img src="https://nomadcoders.co/logos/html5.png" width= 20%; alt="html5" />
+      &nbsp;
+      <img src="https://nomadcoders.co/logos/css3.png" width= 20%; alt="css3" />
+      &nbsp;
+      <img src="https://nomadcoders.co/logos/sass.png" width= 20%; alt="sass" />
+    </div>
+    <br>
+  </strong>
+
+
 ## INTRODUCTION
 - 아래의 웹사이트들을 클론코딩하면서 CSS Layout을 학습한다.
   - (영화 웹) [https://besthorrorscenes.com](https://besthorrorscenes.com)
