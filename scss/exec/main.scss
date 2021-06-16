@@ -1,0 +1,38 @@
+// SCSS Data Type!!
+$number: 1; // .5, 100px, 1em
+$string: bold; // relative, "../images"
+$color: red;
+$boolean: true;
+$null: null;
+$list: orange, royalblue, yellow; // 배열
+$map: ( // 객체 데이터 
+  o: orange,
+  r: royalblue,
+  y: yellow,
+);
+@each $key, $value in $map { // map을 출력해보기
+  .box-#{$key} {
+    color: $value;
+  }
+}
+
+@mixin left-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @content; // 추가적인 내용 삽입을 가능하게하는 부분
+}
+.container {
+  width: 100px;
+  height: 100px;
+  @include left-top;
+}
+.box {
+  width: 200px;
+  height: 300px;
+  @include left-top{
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+}
