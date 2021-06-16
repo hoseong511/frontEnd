@@ -1,12 +1,4 @@
-  <div style=" display: flex; justify-content: space-around">
-    <img style="width: 20%; height: 20%;" src="https://nomadcoders.co/logos/html5.png" alt="html5" />
-    <img style="width: 20%; height: 20%;"  src="https://nomadcoders.co/logos/css3.png" alt="css3" />
-    <img style="width: 20%; height: 20%;"  src="https://nomadcoders.co/logos/sass.png" alt="sass" />
-  </div>
-
-
 ## INTRODUCTION
-
 - 아래의 웹사이트들을 클론코딩하면서 CSS Layout을 학습한다.
   - (영화 웹) [https://besthorrorscenes.com](https://besthorrorscenes.com)
   - (쇼핑몰) [https://paint-box.com](https://paint-box.com)
