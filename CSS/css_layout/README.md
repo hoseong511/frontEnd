@@ -1,8 +1,15 @@
-  <div style=" display: flex; justify-content: space-around">
-    <img style="width: 20%; height: 20%;" src="https://nomadcoders.co/logos/html5.png" alt="html5" />
-    <img style="width: 20%; height: 20%;"  src="https://nomadcoders.co/logos/css3.png" alt="css3" />
-    <img style="width: 20%; height: 20%;"  src="https://nomadcoders.co/logos/sass.png" alt="sass" />
-  </div>
+  <strong align="center" >
+    <h1>CSS Layout Master</h1>
+    <div align="center">
+      <img src="https://nomadcoders.co/logos/html5.png" width= 20%; alt="html5" />
+      &nbsp;
+      <img src="https://nomadcoders.co/logos/css3.png" width= 20%; alt="css3" />
+      &nbsp;
+      <img src="https://nomadcoders.co/logos/sass.png" width= 20%; alt="sass" />
+    </div>
+    <br>
+    
+  </strong>
 
 
 ## INTRODUCTION
