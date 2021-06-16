@@ -59,7 +59,25 @@ cross-axis는 align-items
   </p>
      
 ### 1.4 align-self and order
+- align-self와 order는 container가 아닌 item이 이용하는 속성이다.
+- align-self는 item의 배치를 개별적으로 할 수 있게 조작한다.
+- order는 배치되는 우선순위를 조작한다.
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="jOBXgKE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="align-self, order">
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/jOBXgKE">
+  align-self, order</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
 ### 1.5 wrap, nowrap, reverse, align-content
+- flex-wrap
+- row-reverse, column-reverse, wrap-reverse
+- align-content: cross-axis(line)을 조작한다. flexbox가 2줄 이상일 때 속성이 적용된다.
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="MWpZNze" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="MWpZNze">
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/MWpZNze">
+  Click!</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
 ### 1.6 flex-grow, flex-shrink
 ### 1.7 flex-basis
 ### 1.8 Flexbox Froggy
