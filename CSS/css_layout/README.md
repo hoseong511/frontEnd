@@ -1,17 +1,14 @@
-  <strong align="center" >
-    <h1>CSS Layout Master</h1>
-    <div align="center">
-      <img src="https://nomadcoders.co/logos/html5.png" width= 20%; alt="html5" />
-      &nbsp;
-      <img src="https://nomadcoders.co/logos/css3.png" width= 20%; alt="css3" />
-      &nbsp;
-      <img src="https://nomadcoders.co/logos/sass.png" width= 20%; alt="sass" />
-    </div>
-    <br>
-  </strong>
+  <strong><h1 align="center">CSS Layout Master</h1></strong>
+  <div align="center">
+    <img src="https://nomadcoders.co/logos/html5.png" width= 20%; alt="html5" />
+    &nbsp;
+    <img src="https://nomadcoders.co/logos/css3.png" width= 20%; alt="css3" />
+    &nbsp;
+    <img src="https://nomadcoders.co/logos/sass.png" width= 20%; alt="sass" />
+  </div>
+  <br>
 
-
-## INTRODUCTION
+## **INTRODUCTION**
 - 아래의 웹사이트들을 클론코딩하면서 CSS Layout을 학습한다.
   - (영화 웹) [https://besthorrorscenes.com](https://besthorrorscenes.com)
   - (쇼핑몰) [https://paint-box.com](https://paint-box.com)
@@ -29,7 +26,7 @@
   - Chrome 브라우저
   - Node.js(SCSS를 CSS로 변환 시 필요)
 ---
-## FLEXBOX
+## **FLEXBOX**
 ### 1.0 FLEXBOX 이전에 사용되었던 기술
 - inline-block 이다 보니 상자 옆 여백이 있다.   
  여백은 부모 요소에 font-size를 0 으로 만들면 사라진다.   
@@ -119,7 +116,7 @@ cross-axis는 align-items
   ![image](https://user-images.githubusercontent.com/62678380/122174746-ecaf8a00-cebd-11eb-90ae-fa18cb39ed8a.png)
 
 ---
-## GRID
+## **GRID**
 ### 2.1 Life Before Grid
 - flexbox에서 gird를 만들기 어렵다.
 - space-between 때문에 4와 5가 띄어져있다.
