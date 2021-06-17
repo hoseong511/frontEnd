@@ -93,3 +93,21 @@ new Swiper('.project .swiper-container', {
     nextEl : '.project .swiper-next'
   }
 });
+
+const dropdownBtn = document.querySelector('.dropdown-pc-menu');
+const dropdownList = document.querySelector('.dropdown-pc-list');
+dropdownBtn.addEventListener('click', function(e){
+  e.preventDefault();
+  dropdownList.classList.add('open')
+})
+window.addEventListener('click', function(e){
+  if (e.target.className !== 'dropdown-pc-menu') {
+    console.log(e.target);
+    dropdownList.classList.remove('open')
+    if (e.target.className === 'dropdown-pc-sub') {
+      const value = e.target.textContent;
+      console.log(value);
+      dropdownBtn.innerText = value;
+    }
+  } 
+})

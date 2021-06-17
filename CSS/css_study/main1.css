@@ -1,0 +1,290 @@
+.container {
+  border: 4px solid;
+  display: flex;
+}
+.container .item {
+  height: 100px;
+  background: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+}
+.container .item1 {
+  flex-grow: 1;
+}
+/* flex-grow는 아이템의 증가너비를 설정하는 속성 */
+.container .item2 {
+  width: 100px;
+}
+.basis {
+  margin-top: 10px;
+  border: 4px solid black;
+  display: flex;
+  color: white; 
+}
+.basis .item {
+  height: 100px;
+  background: royalblue;
+  border: 4px dashed red;
+  border-radius: 10px;
+  flex: 1 ;
+  /* 단축속성에서의 basis의 default는 0이다. */
+}
+.basis .item3 {
+  flex-grow: 2;
+}
+/* basis는 요소가 갖고있을 기본 너비 설정이다.!! auto이면 여백의 크기가 같게되는 원리 */
+.align-self {
+  height: 400px;
+  border: 4px solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.align-self .item {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.align-self .item2 {
+  align-self: center;
+}
+.align-self .item5 {
+  align-self: flex-start;
+}
+.align-self .item8 {
+  align-self: stretch;
+  height: auto;
+}
+
+.grid-container {
+  margin-top: 10px;
+  display: inline-grid;
+  width: 300px;
+  height: 250px;
+  border: 4px solid lightgray;
+}
+.item {
+  border: 2px dashed red;
+}
+.grid-container2 {
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(3, 1fr);
+  border: 4px solid lightgray;
+}
+.grid-container2 .item {
+  border: 10px solid red;
+  font-size: 30px;
+}
+.grid-container2 .item:nth-child(1) {
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+.grid-container2 .item:nth-child(2) {
+  grid-row: 1/3;
+}
+.grid-container2 .item:nth-child(4) {
+  grid-row: 4/5;
+  grid-column: -3/-1;
+}
+.grid-container3 {
+  width: 600px;
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-areas:
+    "header header header"
+    "main main aside"
+    ". footer footer";
+  row-gap: 30px;
+  column-gap: 15px;
+  gap: 30px 15px;
+}
+.grid-container3 .item {
+  border: 10px solid red;
+}
+.grid-container3 .item:nth-child(1) {
+  grid-area: header;
+}
+.grid-container3 .item:nth-child(2) {
+  grid-area: main;
+}
+.grid-container3 .item:nth-child(3) {
+  grid-area: aside;
+}
+.grid-container3 .item:nth-child(4) {
+  grid-area: footer;
+}
+.grid-container4 {
+  width: 600px;
+  display: grid;
+  grid-template-rows: repeat(2,100px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  grid-auto-columns: 1fr;
+}
+.grid-container4 .item {
+  border: 10px solid blue;
+}
+.grid-container4 .item:nth-child(1) {
+  grid-column: 1/3;
+}
+.grid-container4 .item:nth-child(2) {
+  grid-column: 3/5;
+}
+.grid-container4 .item:nth-child(3) {
+  grid-column: span 2;
+}
+.grid-container4 .item:nth-child(4) {
+  grid-row: 5/7;
+  grid-column: 6/7;
+}
+.grid-auto {
+  width: 600px;
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column dense;
+}
+.grid-auto .item {
+  border: 10px solid black;
+}
+.grid-auto .item:nth-child(1) {
+  grid-column: span 2;
+}
+.grid-auto .item:nth-child(2) {
+  grid-column: -1/-3;
+}
+.grid-line {
+  width: 600px;
+  display: grid;
+  grid-template-rows: 100px 100px;
+  grid-template-columns: 1fr [center-start] 1fr [center-end] 1fr;
+  grid-auto-flow: dense;
+}
+.grid-line .item {
+  border: 10px solid green;
+}
+.grid-line .item:nth-child(1) {
+  grid-column: center-start / center-end;
+}
+.grid-repeat {
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 100px 200px);
+  align-content: space-around;
+
+}
+.item {
+  border: 10px solid brown;
+}
+.grid-area {
+  width: 600px;
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 100px);
+}
+.grid-area .item {
+}
+.grid-area .item:nth-child(1) {
+  border: 10px solid royalblue;
+  grid-area: 2 / span 2 / span 1 / 4;
+}
+.grid-template {
+  display: grid;
+  /* grid-template-rows: 80px 350px 130px;
+  grid-template-columns: 2fr 100px 1fr;
+  grid-template-areas:
+    "header header header"
+    "main . aside"
+    "footer footer footer"; */
+  grid-template:
+    "header header header" 80px
+    "main . aside" 350px
+    "footer footer footer" 130px
+    / 2fr 100px 1fr;
+}
+.grid-template > * {
+  border: 10px solid yellowgreen;
+}
+.grid-template header { grid-area: header; }
+.grid-template main { grid-area: main; }
+.grid-template aside { grid-area: aside; }
+.grid-template footer { grid-area: footer; }
+
+.align-container {
+  width: 450px;
+  height: 450px;
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 100px);
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  /* space-around, space-between, space-evenly, end, start */
+  border: 10px solid black; 
+}
+.align-container .item:nth-child(1) {
+  align-self: start;
+}
+.order-container {
+  width: 300px;
+  height: 200px;
+  display: grid;
+  grid-template-rows: repeat(2, 100px);
+  grid-template-columns: repeat(3, 100px);
+  border: 10px solid yellow;
+}
+
+.order-container .item:nth-child(1){ order: 6; }
+.order-container .item:nth-child(2){ order: 2; }
+.order-container .item:nth-child(3){ order: -1; }
+.order-container .item:nth-child(4){ order: 5; }
+.order-container .item:nth-child(5){ order: 1; }
+.order-container .item:nth-child(6){ order: 0; }
+.z-container {
+  width: 50%;
+  display: grid;
+  grid-template-rows: repeat(2, 100px);
+  grid-template-columns: repeat(3, 100px);
+}
+.z-container .item:nth-child(1){ grid-area: 1/1/2/3}
+.z-container .item:nth-child(2){ grid-area: 1/2/3/3; background-color: royalblue; z-index: 1;}
+.z-container .item:nth-child(3){ grid-area: 2/2/3/4}
+
+.fit-container {
+  border: 10px solid lightgray;
+  display: grid;
+  grid-template-rows: 100px 100px;
+  grid-template-columns: fit-content(300px) fit-content(100%);
+}
+.fit-container .item {
+  border: 10px solid red;
+}
+.fr-container {
+  border: 10px solid black;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  word-break: keep-all;
+}
+.fr-container .item {
+  border: 10px solid green;
+}
+.auto-fill-container {
+  width: 100%;
+  border: 10px solid lightgray;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  /* auto-fill: 남는 공간을 채우려하지 않는다.
+     auto-fit: 남는 공간을 최소화하려고 한다 */
+  grid-auto-rows: 100px;
+}
+.auto-fill-container .item {
+  border: 10px solid red;
+  font-size: 20px;
+}
