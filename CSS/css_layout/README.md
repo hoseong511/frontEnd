@@ -138,10 +138,79 @@ cross-axis는 align-items
 </p>
 
 ### 2.3 Grid Template Areas 
+- layout을 만들 때 용이하다.
+- 자식요소에 선언을 한 후 부모에서 사용한다.
+- auto: 화면을 채운다.
+- repeat(n, m) 반복횟수: n, 크기: m
+  ```CSS
+  .grid {
+    grid-template-rows: repeat(4, 200px);
+    grid-template-areas:
+    <!-- 사용 -->
+    "header header header header"
+    "content content content"    
+    "footer footer footer footer";
+  }
+  .header {
+    <!-- 선언 -->
+    grid-area: header;
+  }
+  ```
+
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="KKWYwXb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="KKWYwXb">
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/KKWYwXb">
+  Click</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
 ### 2.4 Rows and Columns 
+- grid-template-areas를 사용하지 않고 조작하는 방법이다.
+- grid-row/column-start/end를 이용한다.
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="poeBvVB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="poeBvVB">
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/poeBvVB">
+  poeBvVB</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
 ### 2.5 Shortcuts 
+- `grid-column/row: start / end ;` 이렇게 단축해서 사용한다.
+- `span 4` grid에서 4칸을 차지한다.
+- `1/-1` 시작과 끝을 이렇게 표현할 수 있다.
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="JjWVozE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="JjWVozE">
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/JjWVozE">
+  JjWVozE</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
 ### 2.6 Line Naming 
+- `grid-template-rows: [start-line] 100px [end-line]` 이런식으로 사용한다.
+- `repeat(,[line-name])` repeat에서도 사용할 수 있다.
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="abJxONJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="abJxONJ">
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/abJxONJ">
+  Click</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
 ### 2.7 Grid Template 
+- `fr`: fraction, % 같은 것으로 요소가 담겨있는 크기의 비율로 크기를 계산한다.  
+- `grid-template`를 이용해서 layout을 한눈에 볼 수 있다.
+  ```css
+    .grid-container {
+      display: grid;
+      gap: 10px;
+      height: 50vh;
+      grid-template:
+        "header header header header" 1fr
+        "content content content nav" 2fr
+        "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr;
+    }
+  ```
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="VwpNLdG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="VwpNLdG">
+  <span>See the Pen <a href="https://codepen.io/hoseong511/pen/VwpNLdG">
+  VwpNLdG</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
 ### 2.8 Place Items 
 ### 2.9 Place Content 
 ### 2.10 Auto Columns and Rows 
