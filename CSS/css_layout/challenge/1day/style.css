@@ -23,7 +23,7 @@ body {
   height: 185px;
 }
 .title .main-title {
-  font-size: 50px;
+  font-size: 75px;
   font-weight: 700;
   border-bottom: 2px solid black;
   margin: 35px 30px 10px;
@@ -58,6 +58,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .item {
   width: 130px;
@@ -65,12 +66,12 @@ body {
   border-radius: 75px;
   margin: 5px;
 }
-.container:nth-child(1) .item {
+.item.i1 {
   background: #BAE1F2;
 }
-.container:nth-child(2) .item {
+.item.i2 {
   background: #616365;
 }
-.container:nth-child(3) .item {
+.item.i3 {
   background: #0BA565;
 }
