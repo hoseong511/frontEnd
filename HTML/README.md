@@ -1,13 +1,7 @@
-## [HTML](https://hoseong511.github.io/frontEnd/HTML)
-  <a style="font-size: 13px; " href="https://hoseong511.github.io/frontEnd/HTML/exec"> exec </a>
-  <br>
-  <a style="font-size: 13px; " href="https://hoseong511.github.io/frontEnd/HTML/google"> execGoogle </a>
-  <br>
-  <a style=" font-size: 13px; " href="https://hoseong511.github.io/frontEnd/HTML/bootstrap-test">bootstrap-test</a>
-  <br>
-  Overwatch(<a style="font-size: 13px; " href="https://hoseong511.github.io/frontEnd/HTML/overwatch"> 데모  </a>)
-  <br>
-  Starbucks(<a style=" font-size: 13px; " href="https://hoseong511.github.io/frontEnd/HTML/starbucks">데모</a>)
+## **CONTENTS**
+- <a style="font-size: 13px; " href="https://hoseong511.github.io/frontEnd/HTML/exec"> exec </a>
+- Overwatch <a style="font-size: 13px; " href="https://hoseong511.github.io/frontEnd/HTML/overwatch/deploy"> Link </a>
+- Starbucks<a style=" font-size: 13px; " href="https://hoseong511.github.io/frontEnd/HTML/starbucks"> Link</a>
   
 ## 1. HTML/CSS/JS로 만드는 스타벅스 웹사이트_전체 개요
 ## 2. VS Code
@@ -16,7 +10,7 @@
     - beautify selection 찾기
     - 원하는 단축키 설정 (ex. option + command + /)
 
-    ![ScreenRecorderProject4_2](https://user-images.githubusercontent.com/62678380/110417331-bbfad000-80d8-11eb-99a0-432995bb4ee9.gif)
+      ![ScreenRecorderProject4_2](https://user-images.githubusercontent.com/62678380/110417331-bbfad000-80d8-11eb-99a0-432995bb4ee9.gif)
 
     - Auto Rename Tag 앞태그와 뒷태그가 같이 수정됨
     - Live Server는 개발을 위해 임시로 로컬서버를 오픈하는 기능
