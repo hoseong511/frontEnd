@@ -8,7 +8,7 @@ body {
   height: 100vh;
   padding-top: 1vw;
   font-size: 1.4vw;
-  font-weight: 600;
+  font-weight: 800;
   position: relative;
 }
 #main {
@@ -20,7 +20,7 @@ body {
   border-left: .5vw solid #FD6B3A;
   display: grid;
   grid-template-columns: 4vw auto 4vw;
-  grid-template-rows: 4vw repeat(8, 1fr) 4vw;
+  grid-template-rows: 4vw repeat(10, 1fr) 4vw;
 }
 #main > div {
   border-right: .5vw solid #FD6B3A;
@@ -35,12 +35,12 @@ body {
   grid-row: 1/2;
   background-color: white;
   color: #FD6B3A;
+  font-weight: 600;
 }
 #main .main_nav {
   grid-column: 1/2;
-  grid-row: 2/ span 5;
+  grid-row: 2/ span 6;
   font-size: .8em;
-  font-weight: 800;
 }
 #main .main_nav ul {
   height: 100%;
@@ -50,39 +50,27 @@ body {
   text-orientation: upright;
   color: white;
 }
-#main .main_nav ul li {
-}
-
-#main .newsandsns {
+#main .news {
   grid-column: 1/2;
-  grid-row: span 3 / -2;
+  grid-row: span 3 / -3;
+  writing-mode: vertical-rl;
+  font-size: .8em;
   background-color: white;
   color: #FD6B3A;
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
-  align-items: center;
 }
-#main .newsandsns .news {
-  margin-bottom: 7px;
-  writing-mode: vertical-rl;
-  text-orientation:inherit;
-  transform: rotate(180deg);
-  font-size: .8em;
-  font-weight: 800;
-}
-#main .newsandsns .sns {
-  width: 100%;
-  border-top: .5vw solid #FD6B3A;
+#main .sns {
+  grid-column: 1/2;
+  grid-row: span 1 / -2;
+  background-color: white;
+  color: #FD6B3A;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#main .newsandsns .sns i{
+#main .sns i{
   margin-top: 7px;
 }
-
 #main .main_content {
   grid-column: 2/-2;
   grid-row: 2/-2;
@@ -113,25 +101,49 @@ body {
 }
 #main .order {
   grid-column: -2/-1;
-  grid-row: 2 / span 4;
+  grid-row: 2 / span 5;
   background-color: #45AC4F;
   writing-mode: vertical-rl;
   text-orientation: upright;
   color: white;
+  font-size: .8em;
+}
+#main .order::before {
+  content: "🔆";
+  margin: 10px;
+  font-style: normal;
+}
+#main .order::after {
+  content: "🔆";
+  margin: 10px;
+  font-style: normal;
 }
 #main .reservation {
   grid-column: -2/-1;
-  grid-row: span 4 / -2;
+  grid-row: span 5 / -2;
   background-color: #45AC4F;
   writing-mode: vertical-rl;
   text-orientation: upright;
   color: white;
+  font-size: .8em;
 }
+#main .reservation::before {
+  content: "✦";
+  margin: 10px;
+  font-style: normal;
+}
+#main .reservation::after {
+  content: "✦";
+  margin: 10px;
+  font-style: normal;
+}
+
 #main .footer {
   grid-column: 1/-1;
   grid-row: -2/-1;
   background-color: white;
   color: #FD6B3A;
+  font-weight: 600;
 }
 .talk {
   width: 50px;
