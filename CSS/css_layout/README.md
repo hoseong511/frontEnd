@@ -27,33 +27,30 @@
   - Node.js(SCSS를 CSS로 변환 시 필요)
 ---
 ## **CONTENTS**
-## Flexbox
-
-- flex-direction
-- order
-- justify-content
-- align-items
-- align-self
-- flex-wrap
-- align-content
-- flex-grow
-- flex-shrink
-- flex-basis
-
-## Grid
-
-- grid-template-columns / grid-template-rows
-- column-gap / row-gap => gap
-- grid-template-areas
-- grid-column-start / grid-column-end => grid-column
-- grid-row-start / grid-row-end => grid-row
-- grid-template
-- justify-items / align-items => place-items
-- justify-content / align-content => place-content
-- justify-self / align-self => place-self
-- grid-auto-rows
-- grid-auto-columns
-- grid-auto-flow
+### 1. Flexbox
+  - flex-direction
+  - order
+  - justify-content
+  - align-items
+  - align-self
+  - flex-wrap
+  - align-content
+  - flex-grow
+  - flex-shrink
+  - flex-basis
+### 2. Grid
+  - grid-template-columns / grid-template-rows
+  - column-gap / row-gap => gap
+  - grid-template-areas
+  - grid-column-start / grid-column-end => grid-column
+  - grid-row-start / grid-row-end => grid-row
+  - grid-template
+  - justify-items / align-items => place-items
+  - justify-content / align-content => place-content
+  - justify-self / align-self => place-self
+  - grid-auto-rows
+  - grid-auto-columns
+  - grid-auto-flow
 
 ### Keywords & Functions:
 
@@ -254,7 +251,7 @@ cross-axis는 align-items
   ```
   <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="hoseong511" data-slug-hash="VwpNLdG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="VwpNLdG">
   <span>See the Pen <a href="https://codepen.io/hoseong511/pen/VwpNLdG">
-  VwpNLdG</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
+  Click</a> by Song Hoseong (<a href="https://codepen.io/hoseong511">@hoseong511</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 
@@ -327,3 +324,4 @@ cross-axis는 align-items
 
 ### 2.14 Grid Garden part One 
 ### 2.15 Grid Garden part Two 
+![image](https://user-images.githubusercontent.com/62678380/122676174-c3715f80-d217-11eb-9c81-5368c402eec8.png)
