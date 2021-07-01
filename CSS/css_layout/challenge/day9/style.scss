@@ -45,17 +45,20 @@ header {
         > span {
           margin-left: 10px;
         }
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          li {
+            margin-bottom: 10px;
+          }
+        }
       }
       .year {
         position: relative;
         .yearclick { 
           @include hovermenu; 
-          ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          }
         }
         &:hover {
           .yearclick {@include onmenu;}
@@ -65,12 +68,6 @@ header {
         position: relative;
         .programclick {
           @include hovermenu;
-          ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          }
         }
         &:hover {
           .programclick {@include onmenu;}
@@ -179,7 +176,7 @@ main {
   background-color: black;
   gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-auto-rows: minmax(450px, 1fr);
+  grid-auto-rows: 450px;
   .item {
     background-color: white;
     font-size: 1.5rem;

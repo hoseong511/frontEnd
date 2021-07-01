@@ -40,6 +40,26 @@ header .filter.pc > li > span {
   margin-left: 10px;
 }
 
+header .filter.pc > li ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .filter.pc > li ul li {
+  margin-bottom: 10px;
+}
+
 header .filter.pc .year {
   position: relative;
 }
@@ -59,22 +79,6 @@ header .filter.pc .year .yearclick {
   border-right: 5px solid black;
   border-left: 5px solid black;
   border-bottom: 5px solid black;
-}
-
-header .filter.pc .year .yearclick ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 header .filter.pc .year:hover .yearclick {
@@ -102,22 +106,6 @@ header .filter.pc .program .programclick {
   border-right: 5px solid black;
   border-left: 5px solid black;
   border-bottom: 5px solid black;
-}
-
-header .filter.pc .program .programclick ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 header .filter.pc .program:hover .programclick {
@@ -344,7 +332,7 @@ main {
   gap: 5px;
   -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-auto-rows: minmax(450px, 1fr);
+  grid-auto-rows: 450px;
 }
 
 main .item {
