@@ -1,0 +1,31 @@
+.box-o {
+  color: orange;
+}
+
+.box-r {
+  color: royalblue;
+}
+
+.box-y {
+  color: yellow;
+}
+
+.container {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.box {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+/*# sourceMappingURL=main.css.map */
