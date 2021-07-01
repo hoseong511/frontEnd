@@ -28,31 +28,34 @@
 ---
 ## **CONTENTS**
 ### 1. Flexbox
-  - flex-direction
-  - order
-  - justify-content
-  - align-items
-  - align-self
-  - flex-wrap
-  - align-content
-  - flex-grow
-  - flex-shrink
-  - flex-basis
-### 2. Grid
-  - grid-template-columns / grid-template-rows
-  - column-gap / row-gap => gap
-  - grid-template-areas
-  - grid-column-start / grid-column-end => grid-column
-  - grid-row-start / grid-row-end => grid-row
-  - grid-template
-  - justify-items / align-items => place-items
-  - justify-content / align-content => place-content
-  - justify-self / align-self => place-self
-  - grid-auto-rows
-  - grid-auto-columns
-  - grid-auto-flow
 
-### Keywords & Functions:
+- flex-direction
+- order
+- justify-content
+- align-items
+- align-self
+- flex-wrap
+- align-content
+- flex-grow
+- flex-shrink
+- flex-basis
+
+### 2. Grid
+
+- grid-template-columns / grid-template-rows
+- column-gap / row-gap => gap
+- grid-template-areas
+- grid-column-start / grid-column-end => grid-column
+- grid-row-start / grid-row-end => grid-row
+- grid-template
+- justify-items / align-items => place-items
+- justify-content / align-content => place-content
+- justify-self / align-self => place-self
+- grid-auto-rows
+- grid-auto-columns
+- grid-auto-flow
+
+### 3. Keywords & Functions
 
 - repeat
 - fr
@@ -62,7 +65,7 @@
 - min-content
 - max-content
 
-## SCSS:
+## 4. SCSS
 
 - Variables
 - Nesting
@@ -70,7 +73,8 @@
 - Extend
 - Responsive Mixins
 
-## **FLEXBOX**
+-----
+## **1. FLEXBOX**
 ### 1.0 FLEXBOX 이전에 사용되었던 기술
 - inline-block 이다 보니 상자 옆 여백이 있다.   
  여백은 부모 요소에 font-size를 0 으로 만들면 사라진다.   
@@ -159,8 +163,7 @@ cross-axis는 align-items
 - 이런것도 있네.. 신기하다
   ![image](https://user-images.githubusercontent.com/62678380/122174746-ecaf8a00-cebd-11eb-90ae-fa18cb39ed8a.png)
 
----
-## **GRID**
+## **2. GRID**
 ### 2.1 Life Before Grid
 - flexbox에서 gird를 만들기 어렵다.
 - space-between 때문에 4와 5가 띄어져있다.

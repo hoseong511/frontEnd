@@ -1,0 +1,163 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+html {
+  background-color: #F1E555;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  padding-top: 1vw;
+  font-size: 1.4vw;
+  font-weight: 800;
+  position: relative;
+}
+#main {
+  width: 98%;
+  height: 98%;
+  margin: 0 auto;
+  background-color: #FD6B3A;
+  border-top: .5vw solid #FD6B3A;
+  border-left: .5vw solid #FD6B3A;
+  display: grid;
+  grid-template-columns: 4vw auto 4vw;
+  grid-template-rows: 4vw repeat(10, 1fr) 4vw;
+}
+#main > div {
+  border-right: .5vw solid #FD6B3A;
+  border-bottom: .5vw solid #FD6B3A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+}
+#main .header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background-color: white;
+  color: #FD6B3A;
+  font-weight: 600;
+}
+#main .main_nav {
+  grid-column: 1/2;
+  grid-row: 2/ span 6;
+  font-size: .8em;
+}
+#main .main_nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+}
+#main .news {
+  grid-column: 1/2;
+  grid-row: span 3 / -3;
+  writing-mode: vertical-rl;
+  font-size: .8em;
+  background-color: white;
+  color: #FD6B3A;
+}
+#main .sns {
+  grid-column: 1/2;
+  grid-row: span 1 / -2;
+  background-color: white;
+  color: #FD6B3A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main .sns i{
+  margin-top: 7px;
+}
+#main .main_content {
+  grid-column: 2/-2;
+  grid-row: 2/-2;
+  position: relative;
+}
+#main .main_title {
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-style: normal;
+  font-size: 10vw;
+  font-weight: 900;
+}
+#main .main_content .main_image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#main .main_content .main_image .left {
+  width: 50%;
+  background-image: url("https://user-images.githubusercontent.com/62678380/123815891-d1b72e00-d931-11eb-8eb7-8d6446577ff5.png");
+  background-size: cover;
+}
+#main .main_content .main_image .right {
+  width: 50%;
+  background-image: url("https://user-images.githubusercontent.com/62678380/123811099-eabde000-d92d-11eb-8633-4ee62af17b14.png");
+  background-size: cover;
+}
+#main .order {
+  grid-column: -2/-1;
+  grid-row: 2 / span 5;
+  background-color: #45AC4F;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+  font-size: .8em;
+}
+#main .order::before {
+  content: "🔆";
+  margin: 10px;
+  font-style: normal;
+}
+#main .order::after {
+  content: "🔆";
+  margin: 10px;
+  font-style: normal;
+}
+#main .reservation {
+  grid-column: -2/-1;
+  grid-row: span 5 / -2;
+  background-color: #45AC4F;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+  font-size: .8em;
+}
+#main .reservation::before {
+  content: "✦";
+  margin: 10px;
+  font-style: normal;
+}
+#main .reservation::after {
+  content: "✦";
+  margin: 10px;
+  font-style: normal;
+}
+
+#main .footer {
+  grid-column: 1/-1;
+  grid-row: -2/-1;
+  background-color: white;
+  color: #FD6B3A;
+  font-weight: 600;
+}
+.talk {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 3vw;
+  right: 3vw;
+  background-color: #FD6B3A;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(107, 105, 105);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
