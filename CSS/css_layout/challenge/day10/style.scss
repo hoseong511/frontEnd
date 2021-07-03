@@ -68,8 +68,9 @@ main {
   font-weight: 500;
   background-color: #FF0400;
   display: grid;
+  gap: 10px;
   grid-template-columns: auto repeat(2, 1fr);
-  grid-template-rows: 60px repeat(6, 1fr);
+  grid-template-rows: 80px repeat(6, 1fr);
   .side {
     grid-row: 1/ -1;
     display: grid;
@@ -94,6 +95,7 @@ main {
   }
   .select {
     grid-column: 2/ -1;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     & > div {
@@ -112,6 +114,8 @@ main {
     }
   }
   .item {
+    padding: 10px;
+    border-top: 3px solid black;
     p {
       font-size: 20px;
     }

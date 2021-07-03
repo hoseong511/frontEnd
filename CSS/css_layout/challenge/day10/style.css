@@ -103,10 +103,11 @@ main {
   background-color: #FF0400;
   display: -ms-grid;
   display: grid;
+  gap: 10px;
   -ms-grid-columns: auto (1fr)[2];
       grid-template-columns: auto repeat(2, 1fr);
-  -ms-grid-rows: 60px (1fr)[6];
-      grid-template-rows: 60px repeat(6, 1fr);
+  -ms-grid-rows: 80px (1fr)[6];
+      grid-template-rows: 80px repeat(6, 1fr);
 }
 
 #right .side {
@@ -143,6 +144,7 @@ main {
 
 #right .select {
   grid-column: 2/ -1;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,6 +174,11 @@ main {
 
 #right .select div:nth-child(3) .circle {
   background-color: black;
+}
+
+#right .item {
+  padding: 10px;
+  border-top: 3px solid black;
 }
 
 #right .item p {
