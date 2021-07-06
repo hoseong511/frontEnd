@@ -93,8 +93,14 @@ main {
           justify-content: center;
           text-align: center;
           cursor: pointer;
+          opacity: .5;
+          transition: .5s;
+          &:hover {
+            opacity: 1;
+          }
         }
         .down_num, .up_num {
+          margin-top: 8px;
           font-size: .8em;
           cursor: default;
         }
@@ -105,6 +111,9 @@ main {
     display: flex;
     justify-content: center;
     padding: 36px;
+    .Follow {
+      padding-left: 20px;
+    }
   }
 }
 @media screen and (min-width: 1400px) {

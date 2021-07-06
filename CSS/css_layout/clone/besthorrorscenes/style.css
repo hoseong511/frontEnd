@@ -143,9 +143,17 @@ main article footer .rating > div {
           justify-content: center;
   text-align: center;
   cursor: pointer;
+  opacity: .5;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+main article footer .rating > div:hover {
+  opacity: 1;
 }
 
 main article footer .rating .down_num, main article footer .rating .up_num {
+  margin-top: 8px;
   font-size: .8em;
   cursor: default;
 }
@@ -158,6 +166,10 @@ main .main_footer {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 36px;
+}
+
+main .main_footer .Follow {
+  padding-left: 20px;
 }
 
 @media screen and (min-width: 1400px) {
