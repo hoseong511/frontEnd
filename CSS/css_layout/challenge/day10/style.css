@@ -66,6 +66,7 @@ main {
 
 #left .item .title {
   grid-row: 1/ -1;
+  white-space: nowrap;
   font-size: 80px;
   font-weight: 500;
   padding-left: 15px;
