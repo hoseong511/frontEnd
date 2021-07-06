@@ -64,7 +64,8 @@ main {
 }
 
 main article {
-  padding: 36px;
+  padding: 36px 50px;
+  position: relative;
   display: block;
 }
 
@@ -78,16 +79,24 @@ main article header {
   margin-bottom: 20px;
 }
 
+main article header::before {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.08)), to(transparent));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.08), transparent);
+  content: '';
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
 main article .content {
   width: 100%;
   padding-top: 56.25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative;
+  -webkit-box-shadow: 0 80px 80px -80px #000;
+          box-shadow: 0 80px 80px -80px #000;
+  z-index: 1;
 }
 
 main article .content .content_img {

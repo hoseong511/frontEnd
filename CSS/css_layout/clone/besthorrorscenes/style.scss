@@ -45,19 +45,29 @@ main {
   min-height: 100vh;
   font-size: 2.5rem;
   article {
-    padding: 36px;
+    padding: 36px 50px;
+    position: relative;
     display: block;
     header {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
+      &::before {
+        background-image: linear-gradient(rgba(0,0,0,.08), transparent);
+        content: '';
+        height: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+      }
     }
     .content {
       width: 100%;
       padding-top: 56.25%;
-      display: flex;
-      justify-content: center;
       position: relative;
+      box-shadow: 0 80px 80px -80px #000;
+      z-index: 1;
       .content_img {
         position: absolute;
         top: 0;
