@@ -124,9 +124,13 @@ main article footer .rating {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main article footer .rating > div {
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,6 +138,16 @@ main article footer .rating > div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+main article footer .rating .down_num, main article footer .rating .up_num {
+  font-size: .8em;
+  cursor: default;
 }
 
 main .main_footer {

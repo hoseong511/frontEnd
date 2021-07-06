@@ -85,9 +85,18 @@ main {
       margin-top: 20px;
       .rating {
         display: flex;
+        align-items: center;
         > div {
+          padding: 10px;
           display: flex;
           flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          cursor: pointer;
+        }
+        .down_num, .up_num {
+          font-size: .8em;
+          cursor: default;
         }
       }
     }
