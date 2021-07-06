@@ -1,0 +1,164 @@
+html {
+  font-size: 10px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: block;
+  color: #E3463B;
+  font-family: 'Encode Sans SC', sans-serif;
+  line-height: 1.1;
+  position: relative;
+}
+
+.body_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 7rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #F0F0F0;
+}
+
+.body_header h1 {
+  font-weight: 700;
+  padding: 40px;
+}
+
+.body_header h1 span {
+  display: block;
+}
+
+.body_header .hbody {
+  padding: 40px;
+}
+
+.body_header .hbody p:first-child {
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+
+.body_header .hbody p {
+  font-size: 2.5rem;
+}
+
+main {
+  width: 100%;
+  background-color: #E3463B;
+  color: #fff;
+  min-height: 100vh;
+  font-size: 2.5rem;
+}
+
+main article {
+  padding: 36px;
+  display: block;
+}
+
+main article header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+main article .content {
+  width: 100%;
+  padding-top: 56.25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+main article .content .content_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://besthorrorscenes.com/posters/56_the-vanishing.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+main article footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 20px;
+}
+
+main article footer .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main article footer .rating > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .main_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 36px;
+}
+
+@media screen and (min-width: 1400px) {
+  .body_header {
+    width: 40%;
+    height: 100%;
+  }
+  main {
+    padding-left: 40%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .body_header {
+    position: relative;
+  }
+}
+/*# sourceMappingURL=style.css.map */
