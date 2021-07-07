@@ -152,11 +152,13 @@ main {
   }
   .item:nth-child(1) {
     grid-area: 1/1/-1/2;
-    background-image: url("https://a1office.com.au/wp-content/uploads/2019/05/A1-Visy-Ess-Fields-106.jpg");
+    background-image: url("https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80");
+    background-position: 20% center;
   }
   .item:nth-child(2) {
     grid-column: 2/3;
-    background-image: url("https://a1office.com.au/wp-content/uploads/2019/05/A1-Visy-Ess-Fields-072.jpg");
+    background-image: url("https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
+    background-position: center 60%;
   }
   .item:nth-child(3) {
     grid-area: 1/-2/-1/-1;
@@ -164,6 +166,7 @@ main {
     background-position: center 20%;
   }
   .item:nth-child(4) {
-    background-image: url("https://a1office.com.au/wp-content/uploads/2019/05/A1-Visy-Ess-Fields-017.jpg");
+    background-image: url("https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80");
+    background-position: center 70%;
   }
 }

@@ -9,7 +9,8 @@
   <br>
 
 ## **INTRODUCTION**
-- 아래의 웹사이트들을 클론코딩하면서 CSS Layout을 학습한다.
+- Flexbox와 Grid, SCSS를 학습
+- 아래의 웹사이트들을 클론코딩하면서 CSS Layout을 학습
   - (영화 웹) [https://besthorrorscenes.com](https://besthorrorscenes.com)
   - (쇼핑몰) [https://paint-box.com](https://paint-box.com)
   - (포트폴리오) [http://10x19.co/](http://10x19.co/)
