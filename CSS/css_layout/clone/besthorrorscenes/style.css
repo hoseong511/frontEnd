@@ -172,7 +172,7 @@ main .main_footer .Follow {
   padding-left: 20px;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 900px) {
   .body_header {
     width: 40%;
     height: 100%;
@@ -182,7 +182,7 @@ main .main_footer .Follow {
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 900px) {
   body {
     display: -webkit-box;
     display: -ms-flexbox;
